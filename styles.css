@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+body { 
+	font-family: 'Source Code Pro'; 
+	background: white;
+}
+
+table {
+	empty-cells:show;
+	border-collapse: collapse;
+}
+
+td {
+	min-width: 1em;
+}
+
+.redborder { 
+	border: 4px double red; 
+}
+
+h1 {
+	background-color: lightyellow;
+	border-top:    2px solid black;
+	border-bottom: 2px solid black;
+}
+
+h2, h3 {
+	background-color: lightblue;
+	border-top:    2px solid black;
+	border-bottom: 2px solid black;
+}
+
+.left {
+	border-left: 4px solid blue;
+	margin-left: 10px;
+	background-color: lightgrey;
+}
+
+#back {
+	font-size: 20px;
+}

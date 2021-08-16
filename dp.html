@@ -1,0 +1,54 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<link  href='styles.css' rel='stylesheet'>
+		<style>
+			#agrid {
+				display: grid;
+				grid-template-columns: 1fr 2fr;
+			}
+
+			h2, h3 {
+				background-color: lightblue;
+				border-top:    2px solid black;
+				border-bottom: 2px solid black;
+			}
+
+			.left {
+				border-left: 4px solid blue;
+				margin-left: 10px;
+				background-color: lightgrey;
+			}
+		</style>
+	</head>
+	<body>
+		<h3>Edit Distance</h3>
+		<div id='agrid'>
+			<p>The edit distance between two strings is the minimum steps needed change a source string into a destination string by; inserting a character into the source strings, deleting a character in the destination string; changing a single charatcer in both strings that is in the same location.</p>
+		<div class='left' id='editdist'></div>
+		</div>
+
+		<h3>Knapsack Problem 1/0</h3>
+		<div id='agrid'>
+			<p>The Knapsack problem asks for a given set of items with each item having a cost factor (like weight) and a value factor indicating how important or valued this item is how to maximize the value of a subset of items all the while limiting the total cost to a certain maximum amount.</p>
+		<div class='left' id='ksout'> </div>
+		</div>
+
+
+		<h3>Longest Common Subsequence</h3>
+		<div id='agrid'>
+			<p>The longest common subsequence between two strings is the longest string of characters shared by both strings in the same order. The output shows how the lcs strings is layed out in both strings. A star (*) means the characte is ignored, a space is used to align both strings.</p>
+		<div class='left' id='lcs'></div>
+		</div>
+
+		<h3>Coin Change Problem</h3>
+		<div id='agrid'>
+			<p>The Coin Change problem asks for how to give change for a certain amount using a certain set of coin denominations; each set has a potential unlimited quantity to use.</p>
+		<div class='left' id='coinchange'></div>
+		</div>
+
+		<script src='util.js' type='module'></script>
+		<script src='dp.js' type='module'></script>
+
+	</body>
+</html>
