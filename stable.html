@@ -3,24 +3,30 @@
 	<head>
 		<link href='styles.css' rel='stylesheet'/>
 		<style>
-			#td1 {
-				background-color: lightblue;
-				padding-right: 20px;
-				border-right: 2px solid black;
-			}
-
-			#td2 {
-				background-color: lightgrey;
-			}
 		</style>
 	</head>
 	<body>
+		<a id='back' href='/index.html'>Back</a>
+		<h1>Stable Marriage problem</h1>
 
-		<div id='flexy'>
-			<a id='back' href='/index.html'>Back</a>
-			<div id='middle'>
-				<h1>JavaScript code Examples</h1>
-			<script src='stable.js' type='text/javascript'>
-			</script>
+		<p>So the problem is to match actors with each other (interns and hospitals, marriage partners).  Each actor has certain preferences for partnering with another actor. Ideally every actor partners with the actor they most prefer. For example every intern starts at the hospital they most prefer and every hospital gets the student they want. This is of course not likely. Preferences conflict with each other.</p>
+
+		<p>The stable marriage algorithm tries to solve the problem by matching actors with each other; trying to maximize satisfaction so that all actors get a more or less equal share.</p>
+
+		<p>The example below deals with arranging marriages between 10 men and 10 women. Each person is asked to rank their preferences for all available partners. On each iteration each male offers a proposal to the woman he prefers above others and to whom he has not proposed yet. The woman then accepts the proposal if not engaged already; if engaged she will break the engagement if she prefers the man who proposes over the one she is engaged with.</p>
+
+		<p>A solution is found when a state is reached where all men and women are engaged and there isn't a single instance where there exists a male and female who are engaged to others but both prefer each over their assigned partners.</p>
+
+		<h2>Data</h2>
+		<p>The following data is from the RosettaCode page on Stable Marriage (however the preferences are randomly shuffled) :</p>
+		<div id='data'></div>
+		<h2>Output log</h2>
+		<div id='output'></div>
+		<h2>Final result</h2>
+		<div id='final'></div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/chance/1.1.7/chance.min.js" integrity="sha512-dELYIOEzIECWdvsEdoywFOB4qKDmtQee33yD0dQnzAE7eBGKJ984VQXRLs/vlsP4Sb3VchbQL7iAy4NWqetCsw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+		<script src='stable.js' type='text/javascript'>
+		</script>
 	</body>
 </html>
