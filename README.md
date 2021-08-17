@@ -1,2 +1,3 @@
 # dnsvee.github.io
-GitHub pages website
+
+These webpages demonstrate implementations of common CS algorithms.
