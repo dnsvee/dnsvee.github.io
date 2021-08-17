@@ -214,12 +214,9 @@
 		//
 		// on each step remove the largest value from the heap (at the top; the maximum value) and 
 		// swap it with last node of the heap; decrease the size of the heap by 1; 
-		// this value is now the head of the halve of the array that is sorted
+		// hte max. value now is in the right place in the sorted array
 		// call heapify on the root to fix the heap order
 		//
-		// on each step the heap size decreases by one and the value popped from the heap
-		// is put in the correct index; the second halve of the array will grow by 1 on each 
-		// loop; when no elements are left the array is fully sorted
 		makeheap(arr);
 
 		let a;
