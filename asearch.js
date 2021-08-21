@@ -6,8 +6,8 @@ import { between, randint, shuffle } from './util.js'
 	let wid = document.querySelector('#wrap');
 
 	// size of grid
-	let W  = 32;
-	let H  = 32;
+	let W  = 16;
+	let H  = 16;
 
 	// start at 0, 0; find a path toward 31, 31
 
@@ -33,7 +33,6 @@ import { between, randint, shuffle } from './util.js'
 	class PQ {
 		constructor() {
 			this.arr = [];
-			this.d = false;
 		}
 
 		// pop element with least priority
@@ -42,14 +41,17 @@ import { between, randint, shuffle } from './util.js'
 				throw "Exception in PQ: Pq.pop(), queue empty";
 
 			let a = this.arr[0];
-			if (a.x == 24 && a.y == 22) this.d = true;
 
 			a.infrontier = 0;
 
-			this.arr[0] = this.arr.pop();
-			this.arr[0].pos = 0;
+			if (this.arr.length > 1) {
+				this.arr[0] = this.arr.pop();
+				this.arr[0].pos = 0;
 
-			this.heapify(1);
+				this.heapify(1);
+			} else {
+				a = this.arr.pop();
+			}
 
 			return a;
 		}
@@ -72,7 +74,6 @@ import { between, randint, shuffle } from './util.js'
 
 			this.arr[j - 1].pos = j - 1;
 			this.arr[i - 1].pos = i - 1;
-			if (this.d) console.log(this);
 
 			this.heapify(j);
 		}
@@ -144,14 +145,14 @@ import { between, randint, shuffle } from './util.js'
 	}
 
 	// generate some obstacles
-	for(let x = 0; x < 28; x++) {
-		draw(x, 12, '#', 'red');
-		M[12][x].type = 1; // terrain type 1
+	for(let x = 0; x < 14 x++) {
+		draw(x, 4, '#', 'red');
+		M[4][x].type = 1; // terrain type 1
 	}
 
-	for(let x = 4; x < W; x++) {
-		draw(x, 24, '#', 'red');
-		M[24][x].type = 1; // terrain type 1
+	for(let x = 2; x < W; x++) {
+		draw(x, 12, '#', 'red');
+		M[12][x].type = 1; // terrain type 1
 	}
 
 
