@@ -14,6 +14,9 @@
 	id = document.querySelector('#heapsort_source');
 	id.innerHTML = '<pre>' + heapify.toString() + '\n\n' + makeheap.toString() + '\n\n' + heapsort.toString() + '</pre>';
 
+
+	hljs.highlightAll();
+
 	// check is array is sorted
 	function issorted(a) {
 		if (a.length <= 1) 
