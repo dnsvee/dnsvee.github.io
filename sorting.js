@@ -2,18 +2,17 @@
 
 	// sort functions
 	let id = document.querySelector('#swapsort_source');
-	id.innerHTML = '<pre>' + swapsort.toString() + '</pre>';
+	id.innerHTML = '<pre><code>' + swapsort.toString() + '</code></pre>';
 	id = document.querySelector('#quicksort_source');
-	id.innerHTML = '<pre>' + qsort.toString() + '</pre>';
+	id.innerHTML = '<pre><code>' + qsort.toString() + '</code></pre>';
 	id = document.querySelector('#mergesort_source');
-	id.innerHTML = '<pre>' + merge.toString() + '\n\n' + mergesort.toString() + '</pre>';
+	id.innerHTML = '<pre><code>' + merge.toString() + '\n\n' + mergesort.toString() + '</code></pre>';
 	id = document.querySelector('#selectionsort_source');
-	id.innerHTML = '<pre>' + selsort.toString() + '</pre>';
+	id.innerHTML = '<pre><code>' + selsort.toString() + '</code></pre>';
 	id = document.querySelector('#insertionsort_source');
-	id.innerHTML = '<pre>' + inssort.toString() + '</pre>';
+	id.innerHTML = '<pre><code>' + inssort.toString() + '</code></pre>';
 	id = document.querySelector('#heapsort_source');
-	id.innerHTML = '<pre>' + heapify.toString() + '\n\n' + makeheap.toString() + '\n\n' + heapsort.toString() + '</pre>';
-
+	id.innerHTML = '<pre><code>' + heapify.toString() + '\n\n' + makeheap.toString() + '\n\n' + heapsort.toString() + '</code></pre>';
 
 	hljs.highlightAll();
 
