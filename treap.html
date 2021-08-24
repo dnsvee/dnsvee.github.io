@@ -1,1 +1,32 @@
-../HTML_CSS_JS/treap.html
+<!doctype html5>
+<html>
+	<head>
+		<link href='styles.css' rel='stylesheet'/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/default.min.css" integrity="sha512-3xLMEigMNYLDJLAgaGlDSxpGykyb+nQnJBzbkQy2a0gyVKL2ZpNOPIj1rD8IPFaJbwAgId/atho1+LBpWu5DhA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<style>
+#td1 {
+	background-color: lightblue;
+	padding-right: 20px;
+	border-right: 2px solid black;
+}
+
+			#td2 {
+				background-color: lightgrey;
+			}
+		</style>
+	</head>
+	<body>
+		<a id='back' href='/index.html'>Back</a>
+		<h1>JavaScript code Examples</h1>
+		<p>This page demonstrates an implementation of the Treap data structure. A treap is a form of self-balancing binary tree. For every node in the treap the invariant holds that the parent node always has a higher or equal priority than its children. Also the tree holds the invariant that nodes on the left compare as smaller vs the nodes on the right. Every node on insertion gets assigned a random priority. Then using normal binary tree search an empty leaf node is found where it is inserted. After this the node will have to moved upward into a location where its priority is larger than its child nodes and smaller than its parent. This operation is known as rotation. Imagine two nodes A and B. A is a left child of B but it has a higher priority. By making B a right child of A; and by making the right child of A a left child of B; and swapping A with B in the tree the ordering is such that both invariants hold. After insertion travel up towards the root and do a rotation whenever needed. Removal is done similarily but the element is pushed down into a leaf node where it can be safely removed.</p>
+		<h2>Tests</h2>
+		<div id='tests'>
+		</div>
+		<h2>Source code</h2>
+		<div id='source'></div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/chance/1.1.7/chance.min.js" integrity="sha512-dELYIOEzIECWdvsEdoywFOB4qKDmtQee33yD0dQnzAE7eBGKJ984VQXRLs/vlsP4Sb3VchbQL7iAy4NWqetCsw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js" integrity="sha512-MinqHeqca99q5bWxFNQEQpplMBFiUNrEwuuDj2rCSh1DgeeTXUgvgYIHZ1puBS9IKBkdfLMSk/ZWVDasa3Y/2A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script src='treap.js' type='text/javascript'></script>
+
+	</body>
+</html>
