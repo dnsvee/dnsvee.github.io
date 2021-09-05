@@ -111,9 +111,11 @@ import { choice, shuffle } from './util.js';
 		}
 	}
 
-	// kruskals method of maze generation; random spanning tree generation
 	function kruskal(W, H, M) {
+		// kruskals method of maze generation; random spanning tree generation
 		let E = []
+
+		// init all edges
 		for(let y = 0; y < H; y++) {
 			for(let x = 0; x < W - 1; x++) {
 				E.push({ x0: x, y0: y, x1: x + 1, y1: y})
@@ -135,6 +137,9 @@ import { choice, shuffle } from './util.js';
 			}
 		}
 
+		// implement union-find for using disjoint sets
+		// to check if two parts of the maze share
+		// a connection or if an edge must be created 
 		function root(x, y) {
 			let t = BigInt(y) * BigInt(W) + BigInt(x);
 			while (S[t] != t) {
@@ -153,7 +158,12 @@ import { choice, shuffle } from './util.js';
 			return false;
 		}
 
+		// shuffle all edges
 		shuffle(E);
+
+		// start combining edges as long as the rooms they 
+		// are a part of are not yet already connected via connected
+		// other rooms
 		for (let e of E) {
 			if (union(e.x0, e.y0, e.x1, e.y1)) {
 				if (e.x0 == e.x1) {
@@ -167,9 +177,10 @@ import { choice, shuffle } from './util.js';
 		}
 	}
 
-	// backtracking method; pick an unvisited cell
-	// at random
 	function backtrack(W, H, M) {
+		// backtracking method; pick an unvisited cell
+		// at random
+		//
 		// starting point
 		let x = 0, y = 0; 
 
@@ -213,8 +224,9 @@ import { choice, shuffle } from './util.js';
 		}
 	}
 
-	// recursive division method
 	function recdiv(W, H, M) {
+		// recursive division method
+		//
 		// init
 		for(let y = 0; y < H; y++) 
 			M.push(new Array(W).fill(0));
