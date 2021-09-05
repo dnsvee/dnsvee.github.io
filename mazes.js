@@ -6,10 +6,12 @@ import { choice, shuffle } from './util.js';
 		return Math.floor(Math.random() * (max - min)) + min;
 	}
 
+	// integer division
 	function idiv(d, n) {
 		return Math.floor(d / n);
 	}
 
+	// shuffle an array
 	function shuffle(a) {
 		for(let i = a.length - 1; i > 0; i--) {
 			let j = Math.floor(Math.random() * (i + 1));
@@ -29,18 +31,19 @@ import { choice, shuffle } from './util.js';
 
 			for (let e of [ [0b0100, 0b0001, x1 + 1, y1], [0b0001, 0b0100, x1 - 1, y1], [0b1000, 0b0010, x1, y1 - 1], [0b0010, 0b1000, x1, y1 + 1] ]) {
 
-				// inside maze
+				// not inside maze
 				if ( !(0 <= e[2] && e[2] < W && 0 <= e[3] && e[3] < H) ) 
 					continue;
 
-				// if not connection
+				// no connection
 				if ( !(M[e[3]][e[2]] & e[1]) || !(M[y1][x1] & e[0]) )
 					continue;
 			
-				// if not turn back
+				// avoid moving back the same way
 				if ( (e[2] == x0 && e[3] == y0) ) 
 					continue;
 
+				// recur
 				if (solve_(x1, y1, e[2], e[3])) {
 					S.push([e[2], e[3]]);
 					return true;
@@ -70,8 +73,6 @@ import { choice, shuffle } from './util.js';
 		c.textBaseline = 'top';
 		c.font         = '16px monospace';
 
-		//c.clearRect(0, 0, c.width, c.height);
-
 		let arr = new Array(16).fill(0);
 		arr[0b0000] = ' ';
 		arr[0b0001] = '╸';
@@ -92,6 +93,7 @@ import { choice, shuffle } from './util.js';
 
 		let syms = arr.join('');
 
+		// draw the maze
 		c.fillStyle = 'black';
 		for(let y = 0; y < H; y++) {
 			for(let x = 0; x < W; x++) {
@@ -99,6 +101,7 @@ import { choice, shuffle } from './util.js';
 			}
 		}
 
+		// draw the solution
 		c.fillStyle = 'red';
 		c.fillText(syms[M[0][0]], 0, 0);
 		s.push([W - 1, H - 1]);
@@ -108,7 +111,7 @@ import { choice, shuffle } from './util.js';
 		}
 	}
 
-	// kruskals method of maze generation
+	// kruskals method of maze generation; random spanning tree generation
 	function kruskal(W, H, M) {
 		let E = []
 		for(let y = 0; y < H; y++) {
@@ -164,7 +167,8 @@ import { choice, shuffle } from './util.js';
 		}
 	}
 
-
+	// backtracking method; pick an unvisited cell
+	// at random
 	function backtrack(W, H, M) {
 		let x = 0, y = 0;
 
@@ -193,6 +197,7 @@ import { choice, shuffle } from './util.js';
 		}
 	}
 
+	// recursive division method
 	function recdiv(W, H, M) {
 		for(let y = 0; y < H; y++) {
 			M.push(new Array(W).fill(0));
@@ -260,11 +265,5 @@ import { choice, shuffle } from './util.js';
 	drawmaze(W, H, '#kruskal_canvas', kruskal);
 	drawmaze(W, H, '#division_canvas', recdiv);
 	drawmaze(W, H, '#backtracking_canvas', backtrack);
-
-
-
-	// solve
-	//
-
 })();
 
