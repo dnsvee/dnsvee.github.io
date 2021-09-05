@@ -191,8 +191,9 @@ import { choice, shuffle } from './util.js';
 			if ((y > 0) && M[y - 1][x] === 0) 
 				L.push([x, y - 1, 8, 2]);
 
-			// not done yet
+			// find rooms for creating edges with
 			if (L.length) {
+				// shuffle L randomizing the maze
 				let i = choice(L);
 				let [x0, y0, v, v0] = i;
 				M[y ][x ] |= v;
@@ -203,19 +204,22 @@ import { choice, shuffle } from './util.js';
 				continue;
 			}
 
+			// done
 			if (!cells.length) 
 				break;
 
+			// current cell
 			[x, y] = cells.pop();
 		}
 	}
 
 	// recursive division method
 	function recdiv(W, H, M) {
-		for(let y = 0; y < H; y++) {
+		// init
+		for(let y = 0; y < H; y++) 
 			M.push(new Array(W).fill(0));
-		}
 
+		// init border
 		for (let y = 0; y < H; y++) {
 			for (let x = 0; x < W; x++) {
 				let v = 0b1111;
@@ -227,6 +231,7 @@ import { choice, shuffle } from './util.js';
 			}
 		}
 
+		// keep dividing rooms 
 		function recdiv(w0, w1, h0, h1) {
 			let W = w1 - w0;
 			let H = h1 - h0;
@@ -234,6 +239,8 @@ import { choice, shuffle } from './util.js';
 			if (W >= 1 && H >= 1) {
 				let wx = randomInt(w1, w0);
 				let hx = randomInt(h1, h0);
+
+				// divide vert.
 				if (W >= H) {
 					for(let i = h0; i <= h1; i++) {
 						let v0 = M[i][wx];
@@ -248,6 +255,7 @@ import { choice, shuffle } from './util.js';
 						M[i][wx + 1] = v1;
 					}
 
+					// divide this room further
 					recdiv(w0,     wx, h0, h1);
 					recdiv(wx + 1, w1, h0, h1);
 				} else {
@@ -263,12 +271,14 @@ import { choice, shuffle } from './util.js';
 						M[hx + 1][i] = v1;
 					}
 
+					// divide this room further
 					recdiv(w0, w1, h0, hx);
 					recdiv(w0, w1, hx + 1, h1);
 				}
 			}
 		}
 
+		// init call
 		recdiv(0, W - 1, 0, H - 1);
 	};
 
