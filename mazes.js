@@ -170,16 +170,28 @@ import { choice, shuffle } from './util.js';
 	// backtracking method; pick an unvisited cell
 	// at random
 	function backtrack(W, H, M) {
-		let x = 0, y = 0;
+		// starting point
+		let x = 0, y = 0; 
 
+		// stack of points being visited
 		let cells = [];
 		while (true) {
 			let L = [];
-			if ((x < W - 1) && M[y][x + 1] === 0) L.push([x + 1, y, 4, 1]);
-			if ((x > 0)     && M[y][x - 1] === 0) L.push([x - 1, y, 1, 4]);
-			if ((y < H - 1) && M[y + 1][x] === 0) L.push([x, y + 1, 2, 8]);
-			if ((y > 0)     && M[y - 1][x] === 0) L.push([x, y - 1, 8, 2]);
 
+			// check ic urrent point inside bounds
+			if ((x < W - 1) && M[y][x + 1] === 0) 
+				L.push([x + 1, y, 4, 1]);
+
+			if ((x > 0) && M[y][x - 1] === 0) 
+				L.push([x - 1, y, 1, 4]);
+
+			if ((y < H - 1) && M[y + 1][x] === 0) 
+				L.push([x, y + 1, 2, 8]);
+
+			if ((y > 0) && M[y - 1][x] === 0) 
+				L.push([x, y - 1, 8, 2]);
+
+			// not done yet
 			if (L.length) {
 				let i = choice(L);
 				let [x0, y0, v, v0] = i;
@@ -191,7 +203,8 @@ import { choice, shuffle } from './util.js';
 				continue;
 			}
 
-			if (!cells.length) break;
+			if (!cells.length) 
+				break;
 
 			[x, y] = cells.pop();
 		}
