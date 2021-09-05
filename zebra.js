@@ -274,6 +274,8 @@
 	let id = document.querySelector('#source');
 	id.innerHTML = `<pre><code>${sourcefile.toString()}</code></pre>`;
 
+	hljs.highlightAll();
+
 	window.requestAnimationFrame(step);
 })();
 
