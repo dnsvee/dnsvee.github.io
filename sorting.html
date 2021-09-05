@@ -4,11 +4,11 @@
 		<link href='styles.css' rel='stylesheet'/>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/default.min.css" integrity="sha512-3xLMEigMNYLDJLAgaGlDSxpGykyb+nQnJBzbkQy2a0gyVKL2ZpNOPIj1rD8IPFaJbwAgId/atho1+LBpWu5DhA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 		<style>
-			#td1 {
-				background-color: lightblue;
-				padding-right: 20px;
-				border-right: 2px solid black;
-			}
+#td1 {
+	background-color: lightblue;
+	padding-right: 20px;
+	border-right: 2px solid black;
+}
 
 			#td2 {
 				background-color: lightgrey;
@@ -23,39 +23,47 @@
 				<h1>JavaScript code Examples</h1>
 				<p>On this page a selection of sorting algorithms. For each algorithm the source code is displayed and the last section of the webpage displays the result of a performance test by sorting a random array of numbers.</p> 
 				<div>
-					<hr/>
+
+					<h2 id='perfh2'>Performance test (sort 1000 random numbers)</h2>
+					<label id='report'>
+					</label>
+
+
 					<h2 id='header'>Swap sort</h2>
 					<p>Scan the entire array and repeatedly swap two elements when they are out of order. Stop when after scanning the entire array no swap was needed.</p>
 					<p id='swapsort_source'></p>
+
 
 					<h2>Quick sort</h2>
 					<p>Choose an appropriate value for the array that splits it in halves of roughly equal size. Create three new arrays; one with all the values smaller than the pivot; one with al the values equal value to the pivot; and one with all the values larger. Run quick sort on the resulting halves with smaller/larger values. Combine the three arrays when done.
 					<p id='quicksort_source'></p>
 
+
 					<h2>Merge sort</h2>
 					<p>First step is to recursively divide an array in two halves and keep dividing them until each resulting halve contains at most one element. Then merge the resulting in arrays of increasing size until all of them are merged into one array. Merging two sorted arrays into one sorted array can be done with reasonable efficiency.</p>
 					<p id='mergesort_source'></p>
 
+
 					<h2>Selection sort</h2>
 					<p>Split the array into two halves. First part is the array that is sorted; second halve is the unsorted part. On each iteration of the loop select the smallest element from the remaining part of the array that's still unsorted and insert into the sorted part of array.</p>
 					<p id='selectionsort_source'></p>
+
 
 					<h2>Insertion sort</h2>
 
 					<p>Split the array into two parts. First part is sorted. Second part unsorted. On each iteration select the first element from the unsorted part and repeatedly swap it down into the correct place.</p>
 					<p id='insertionsort_source'></p>
 
+
 					<h2>Heap sort</h2>
 					<p>A binary heap is an array that contains a binary tree. A parent node of index i has child nodes at location i * 2 and i * 2 + 1. A max. heap has at it's root the maximum value of the array. Take an unsorted array and turn it into a heap by ensuring the parent/child relationship holds for each node. By repeatedly popping off this max. value and placing it in the correct place at the end of the array you can sort the unsorted array. On each step the heap becomes one smaller and the sorted array one larger.</p>
 					<p id='heapsort_source'></p>
 
+
 				</div>
 			</div>
 
-			<h2 id='perfh2'>Performance test (sort 1000 random numbers)</h2>
-			<label id='report'>
-			</label>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js" integrity="sha512-MinqHeqca99q5bWxFNQEQpplMBFiUNrEwuuDj2rCSh1DgeeTXUgvgYIHZ1puBS9IKBkdfLMSk/ZWVDasa3Y/2A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js" integrity="sha512-MinqHeqca99q5bWxFNQEQpplMBFiUNrEwuuDj2rCSh1DgeeTXUgvgYIHZ1puBS9IKBkdfLMSk/ZWVDasa3Y/2A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 			<script src='sorting.js' type='text/javascript'>
 			</script>
 	</body>
