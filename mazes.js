@@ -266,7 +266,9 @@ import { choice, shuffle } from './util.js';
 	drawmaze(W, H, '#division_canvas', recdiv);
 	drawmaze(W, H, '#backtracking_canvas', backtrack);
 
-	//id.innerHTML = '<pre><code>' + inssort.toString() + '</code></pre>';
+	let id;
+	id = document.querySelector('#kruskalsrc');
+	id.innerHTML = '<pre><code>' + kruskal.toString() + '</code></pre>';
 //	id = document.querySelector('#heapsort_source');
 //	id.innerHTML = '<pre><code>' + heapify.toString() + '\n\n' + makeheap.toString() + '\n\n' + heapsort.toString() + '</code></pre>';
 
