@@ -227,7 +227,7 @@
 	// output table
 	let text  = '<tr> <th>===</th><th>Nationality</th> <th>Drinks</th> <th>Smokes</th> <th>Pet</th> <th>Color</th> </tr>';
 	for(let i = 0; i < 5; i++) 
-		text += '<tr> <td>===</td><td></td> <td></td> <td></td> <td></td> <td></td> </tr>';
+		text += '<tr> <td>_________</td><td></td> <td></td> <td></td> <td></td> <td></td> </tr>';
 
 	document.querySelector('#table1').innerHTML = text;
 
