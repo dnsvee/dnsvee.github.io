@@ -270,7 +270,6 @@
 		}
 	}
 	// start
-	//
 	let id = document.querySelector('#source');
 	id.innerHTML = `<pre><code>${sourcefile.toString()}</code></pre>`;
 
