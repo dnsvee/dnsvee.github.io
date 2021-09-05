@@ -1,11 +1,11 @@
 // implements the solution to the Einstein/Zebra puzzle from Rosettacode
-(function() {
+(function sourcefile() {
 	// adds required properties (nationality, drinks, smokes, color of house, pet) for an Occupant object if they do not exist
 	// in the 'occ' paramater 
 	function occupant(occ) {
-		for (i of ['nat', 'dri', 'smo', 'col', 'pet']) {
-			if (!occ[i]) occ[i] = '';
-		}
+		for (i of ['nat', 'dri', 'smo', 'col', 'pet']) 
+			if (!occ[i]) 
+				occ[i] = '';
 		return occ;
 	}
 
@@ -14,7 +14,9 @@
 
 	// every rule is represented with a function generator 
 	// each rule tries every possible combination of possible answers while respecting
-	// the info known up to this point. If nothing works it fails with done prop. set to true
+	// the info known up to this point 
+	// If nothing works it fails letting the caller know it needs
+	// to try a new route
 	//
 	function* rule2() {
 		for (let i of [2, 3, 4]) {
@@ -161,7 +163,6 @@
 		return;
 	}
 
-
 	function* lastrule() {
 		for (let i of [0, 1, 2, 3]) {
 			if (O[i].smo === '' && O[i + 1].dri === '') {
@@ -209,6 +210,8 @@
 		return;
 	}
 
+	// which owner pet has not been identified
+	// that is the zebra owner
 	function* findzebra() {
 		for (let i of [0, 1, 2, 3, 4]) {
 			if (!O[i].pet) {
@@ -216,17 +219,15 @@
 				throw "Done";
 			}
 		}
-		console.log(O);
 	}
 
-	// this is a stack of generator functions representing the rules of the puzzle
+	// this is a stack of generator functions representing the state of the solver
 	let S = [rule2()];
 
 	// output table
 	let text  = '<tr> <th>Nationality</th> <th>Drinks</th> <th>Smokes</th> <th>Pet</th> <th>Color</th> </tr>';
-	for(let i = 0; i < 5; i++) {
+	for(let i = 0; i < 5; i++) 
 		text += '<tr> <td></td> <td></td> <td></td> <td></td> <td></td> </tr>';
-	}
 
 	document.querySelector('#table1').innerHTML = text;
 
@@ -235,9 +236,12 @@
 		let r;
 
 		try {
-			// calls rule on top of stack to generate one iteration of solving the puzzle
-			// when a rule generates a new possible state of the puzzle it calls another rule function
-			// this represents depth first search
+			// calls rule on top of stack to generate next attempt at
+			// solving the puzzle
+			// when a rule generates a new possible state of the puzzle 
+			// it calls another rule function
+			// if a generator fails it backtracks into a previous
+			// known valid state
 			r = S[S.length - 1].next();
 		} catch (err) {
 			// done
@@ -247,8 +251,8 @@
 		window.requestAnimationFrame(step);
 
 		// the generator function cannot find any more possible solutions
-		// it's popped from the stack and the previous generator becomes top of the stack
-		// this represents backtracking
+		// it's popped from the stack and the previous generator becomes i
+		// top of the stack
 		if (r.done) S.pop();
 
 		// output known info.
