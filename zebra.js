@@ -227,7 +227,7 @@
 	// output table
 	let text  = '<tr> <th>===</th><th>Nationality</th> <th>Drinks</th> <th>Smokes</th> <th>Pet</th> <th>Color</th> </tr>';
 	for(let i = 0; i < 5; i++) 
-		text += '<tr> <td></td> <td></td> <td></td> <td></td> <td></td> </tr>';
+		text += '<tr> <td>===</td><td></td> <td></td> <td></td> <td></td> <td></td> </tr>';
 
 	document.querySelector('#table1').innerHTML = text;
 
@@ -261,11 +261,11 @@
 		for (let i = 0; i < 5; i++) {
 			let o = O[i];
 			let c = tid.rows.item(i + 1).cells;
-			c.item(0).textContent = o.nat;
-			c.item(1).textContent = o.dri;
-			c.item(2).textContent = o.smo;
-			c.item(3).textContent = o.pet;
-			c.item(4).textContent = o.col;
+			c.item(1).textContent = o.nat;
+			c.item(2).textContent = o.dri;
+			c.item(3).textContent = o.smo;
+			c.item(4).textContent = o.pet;
+			c.item(5).textContent = o.col;
 		}
 	}
 	// start
