@@ -241,6 +241,24 @@ class Treap {
 		this.root = null;
 		this.sz   = 0;
 	}
+
+	depth_(n, d) {
+		let d0 = d, d1 = d;
+		if (n.l != null)
+			d0 = this.depth_(n.l, d + 1);
+
+		if (n.r != null)
+			d1 = this.depth_(n.r, d + 1);
+
+		return Math.max(d0, d1);
+	}
+
+	depth() {
+		if (this.root == null)
+			return 0;
+
+		return this.depth_(this.root, 1);
+	}
 }
 
 function assert(r, e, m) {
@@ -264,7 +282,9 @@ try {
 	while (names.length) 
 		t.insert(names.pop(), cities.pop());
 
+
 	assert(t.size(), 10000, "size() != 10000");
+	console.log('depth', t.depth());
 
 	// find and update a mode
 	let f = t.find(n);
@@ -285,25 +305,17 @@ try {
 
 	assert(t.toString(), "{0, 1, 2, 3, 4}")
 
-	assert(t.find(2), undefined);
-	t.remove(2);
-	t.find(2);
+	let test = (i)=> {
+		assert(t.find(i), undefined);
+		t.remove(i);
+		t.find(i);
+	}
 
-	assert(t.find(3), undefined);
-	t.remove(3);
-	t.find(3);
-
-	assert(t.find(0), undefined);
-	t.remove(0);
-	t.find(0);
-
-	assert(t.find(1), undefined);
-	t.remove(1);
-	t.find(1);
-
-	assert(t.find(4), undefined);
-	t.remove(4);
-	t.find(4);
+	test(2);
+	test(3);
+	test(0);
+	test(1);
+	test(4);
 
 	assert(t.size(), 0);
 
