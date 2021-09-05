@@ -269,6 +269,13 @@ import { choice, shuffle } from './util.js';
 	let id;
 	id = document.querySelector('#kruskalsrc');
 	id.innerHTML = `<pre><code>${kruskal.toString()}</code></pre>`;
+
+	id = document.querySelector('#recbacksrc');
+	id.innerHTML = `<pre><code>${backtrack.toString()}</code></pre>`;
+
+	id = document.querySelector('#divmethsrc');
+	id.innerHTML = `<pre><code>${recdiv.toString()}</code></pre>`;
+
 //	id = document.querySelector('#heapsort_source');
 //	id.innerHTML = '<pre><code>' + heapify.toString() + '\n\n' + makeheap.toString() + '\n\n' + heapsort.toString() + '</code></pre>';
 
