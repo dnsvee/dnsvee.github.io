@@ -249,7 +249,7 @@
 
 
 	// random nums
-	let size = 10000;
+	let size = 1000;
 	let arr  = new Array(size);
 	arr = arr.fill(0).map(a => Math.floor(Math.random() * 1000000));
 
