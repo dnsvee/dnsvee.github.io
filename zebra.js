@@ -253,7 +253,8 @@
 		// the generator function cannot find any more possible solutions
 		// it's popped from the stack and the previous generator becomes i
 		// top of the stack
-		if (r.done) S.pop();
+		if (r.done) 
+			S.pop();
 
 		// output known info.
 		let tid = document.querySelector('#table1');
