@@ -2,9 +2,14 @@
 //
 import { between, randint, shuffle } from './util.js'
 
-(function() {
+(function sourcefile() {
 	let wid = document.querySelector('#wrap');
 	let bid = document.querySelector('#start');
+
+	let id = document.querySelector('#source');
+	id.innerHTML = `<pre><code>${sourcefile.toString()}</code></pre>`;
+
+	hljs.highlightAll();
 
 	start.onclick = () => {
 		window.requestAnimationFrame(step);
