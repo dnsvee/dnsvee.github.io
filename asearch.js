@@ -7,6 +7,7 @@ import { between, randint, shuffle } from './util.js'
 	let bid = document.querySelector('#start');
 
 	let id = document.querySelector('#source');
+
 	id.innerHTML = `<pre><code>${sourcefile.toString()}</code></pre>`;
 
 	hljs.highlightAll();
