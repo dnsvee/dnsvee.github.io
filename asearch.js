@@ -12,6 +12,8 @@ import { between, randint, shuffle } from './util.js'
 
 	hljs.highlightAll();
 
+	// add a unpassable terrain item when clicked on a cell
+	// in the maze
 	start.onclick = () => {
 		window.requestAnimationFrame(step);
 		for(let y = 0; y < H; y++) {
@@ -30,6 +32,7 @@ import { between, randint, shuffle } from './util.js'
 		}
 	}
 
+	// draws a wall in the maze
 	let placewall = (e) => {
 		if (e.buttons == 0) 
 			return;
@@ -48,7 +51,7 @@ import { between, randint, shuffle } from './util.js'
 	let W  = 20
 	let H  = 20
 
-	// start at 0, 0; find a path toward 31, 31
+	// start at 0, 0; find a path toward W, H
 
 	// table to use as display
 	let t = [];
@@ -63,16 +66,17 @@ import { between, randint, shuffle } from './util.js'
 	wid.innerHTML = t.join('');
 
 	// heuristic function for asearch
+	// combines known cost and ia guestimate of cost to reach exit
 	let heur = (i) => i.cost + Math.abs(W - 1 - i.x) +  Math.abs(H - 1 - i.y);
-	//let heur = (i) => Math.abs(W - 1 - i.x) + Math.abs(H - 1 - i.y);
-	//let heur = (i) => i.cost;
 
-	// use manhattan distance as heuristic ofr priority queue  
+	// function used by priority queue when comparing
+	// cells
 	let cmp = (e0, e1) => {
 		let h0 = heur(e0);
 		let h1 = heur(e1);
 
 		if (h0 == h1) {
+			// tie breaker when heuristic is the same
 			let s0 = Math.sqrt(Math.pow(e0.x - W - 1, 2) + Math.pow(e0.y - H - 1, 2));
 			let s1 = Math.sqrt(Math.pow(e1.x - W - 1, 2) + Math.pow(e1.y - H - 1, 2));
 			return s0 < s1;
@@ -90,10 +94,11 @@ import { between, randint, shuffle } from './util.js'
 		// pop element with least priority
 		pop() {
 			if (this.arr.length == 0) 
-				throw "Exception in PQ: Pq.pop(), queue empty";
+				throw "Pq::pop: queue empty";
 
 			let a = this.arr[0];
 
+			// infrontier attr tracks if cells is in Priority Queue
 			a.infrontier = 0;
 
 			if (this.arr.length > 1) {
@@ -133,16 +138,19 @@ import { between, randint, shuffle } from './util.js'
 
 		// remove element and insert with updated priority
 		update(e) {
-			// is in the frontier already
+			// is it in the queue already?
 			if (e.infrontier == 1) {
+				// remove and reinsert later
 				let a = this.arr.pop();
 				a.pos = e.pos;
 				this.arr[e.pos] = a;
 				this.heapify(e.pos + 1);	
 			}
 
+			// track that cell is in queue
 			e.infrontier = 1;
 
+			// insert or reinsert
 			this.insert(e);
 		}
 
@@ -151,18 +159,23 @@ import { between, randint, shuffle } from './util.js'
 			return this.arr.length;
 		}
 
-		// insert at botttom and move up to right position 
+		// insert at bottom and move up to right position 
 		insert(e) {
 			e.infrontier = 1;
 
 			this.arr.push(e);
-			let i = this.arr.length; // index
+
+			// keep track of the position in the queue where the cell is 
+			// inserted
+			let i = this.arr.length; 
 			this.arr[i - 1].pos = i - 1;
 
+			// insert at the right spot and maintain queue invariants
 			while (i != 1) {
 				let r = Math.floor(i / 2);
 
-				if (cmp(this.arr[r - 1], this.arr[i - 1])) return; 
+				if (cmp(this.arr[r - 1], this.arr[i - 1])) 
+					return; 
 
 				let a = this.arr[i - 1];
 				this.arr[i - 1] = this.arr[r - 1];
@@ -179,22 +192,24 @@ import { between, randint, shuffle } from './util.js'
 	// the priority queue to use
 	let Pq = new PQ();
 
+	// the maze
 	let M = [];
 
-	// init. grid to use as map
+	// init. the maze
 	for(let y = 0; y < H; y++) {
 		let a = [];
 		for(let x = 0; x < W; x++) {
 			// from : previous node in least cost path
 			// cost : cost of node so far
-			// pos  : position in prior. queue 
-			// infrontier: elem. in frontier
+			// pos  : position in queue 
+			// infrontier: is the element in the queue
 			// type : terrain type
 			a.push({x: x, y: y, from: null, type: 0, cost: 1000000, pos: -1, infrontier: 0});
 		}	
 		M.push(a);
 	}
 
+	// draw char 's' at the pos x, y in the maze
 	let draw = (x, y, s, c = 'black') => {
 		wid.rows.item(y).cells.item(x).textContent = s;
 		wid.rows.item(y).cells.item(x).style.color   = c;
@@ -204,9 +219,9 @@ import { between, randint, shuffle } from './util.js'
 	let m   = M[0][0];
 	m.cost  = 0;
 
+	// insert starting position in the queue
 	Pq.insert(m);
 
-	// check if value in range(a, b)
 
 	// offset of all four neighbours
 	let nbs = [[-1, 0], [1, 0], [0, -1], [0, 1]];
@@ -222,9 +237,10 @@ import { between, randint, shuffle } from './util.js'
 
 		// if goal reached
 		if ((i.x == W - 1) && (i.y == H - 1)) {
-			// this sets character in table element
+			// draw symbol at exit
 			draw(i.x, i.y, '$', 'blue');
 
+			// draw the best path from start to finish
 			let y = H - 1;
 			let x = W - 1;
 			let e = M[y][x];
@@ -239,15 +255,13 @@ import { between, randint, shuffle } from './util.js'
 			return;
 		}
 
-		// this updates the displayed grid using table cells
-		draw(i.x, i.y, "@");//'♣');
+		// draw a symbol at current position
+		draw(i.x, i.y, "@");
 
 		window.requestAnimationFrame(step);
 
-		// rotate offsets to break ties in Pq of nodes with same priority 
-		// makes grid look a bit better
-		//nbs = [nbs.pop(), ...nbs];
-
+		// check neighbours of current cell and see
+		// if they needed to be added to the queue
 		for (let [n0, n1] of nbs) {
 			let x0 = i.x + n0;
 			let y0 = i.y + n1;
