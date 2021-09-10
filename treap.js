@@ -279,12 +279,11 @@ try {
 	let cities = chance.unique(chance.city, 10000);
 	let n = names[0];
 	let c = cities[0];
+
 	while (names.length) 
 		t.insert(names.pop(), cities.pop());
 
-
 	assert(t.size(), 10000, "size() != 10000");
-	console.log('depth', t.depth());
 
 	// find and update a mode
 	let f = t.find(n);

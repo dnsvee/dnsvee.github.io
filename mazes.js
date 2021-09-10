@@ -311,9 +311,6 @@ import { choice, shuffle } from './util.js';
 	id = document.querySelector('#divmethsrc');
 	id.innerHTML = `<pre><code>${recdiv.toString()}</code></pre>`;
 
-//	id = document.querySelector('#heapsort_source');
-//	id.innerHTML = '<pre><code>' + heapify.toString() + '\n\n' + makeheap.toString() + '\n\n' + heapsort.toString() + '</code></pre>';
-
 	hljs.highlightAll();
 
 })();
