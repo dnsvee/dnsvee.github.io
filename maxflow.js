@@ -14,6 +14,8 @@ D B 8
 D t 10
 `;
 
+	let out = [];
+
 	let Flows = new Map();
 	let Nodes = new Map();
 
@@ -29,7 +31,7 @@ D t 10
 
 	function print_flows() {
 		for(let f of Flows.keys())
-			console.log(`flow of ${f} is ${Flows.get(f)}`);
+			out.push(`flow of ${f} is ${Flows.get(f)}`);
 	}
 
 	print_flows();
@@ -41,10 +43,6 @@ D t 10
 
 	// will break when no more augmenting paths are found
 	while (true) {
-		step += 1;
-		console.log(`============== ${step} ============`);
-		if (step == 10)
-			break;
 
 		// key is a node; value is previous node that reaches this node
 		let M = new Map(); // temporary information
@@ -87,7 +85,9 @@ D t 10
 					if (f.match(/t.+/)) 
 						total -=  Flows.get(f);
 				}
-				console.log(`max flow is ${total}`);
+
+				out.push(`max flow is ${total}`);
+				document.querySelector("#output").innerHTML = out.join('');
 				return;
 			}
 
