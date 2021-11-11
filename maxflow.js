@@ -1,4 +1,7 @@
-(function() {
+(function maxflow() {
+	document.querySelector("#source").innerHTML = `<pre><code class="language-javascript">${maxflow.toString()}</code></pre>`
+	hljs.highlightAll();
+
 	Graph = `
 s A 10
 s C 8
