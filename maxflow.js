@@ -1,4 +1,3 @@
-
 Graph = `
 s A 10
 s C 8
