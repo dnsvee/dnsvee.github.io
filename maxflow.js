@@ -95,9 +95,9 @@ D t 10
 			let cur = Sink;
 			let bottle = 9999;
 
-			console.log('path found');
+			out.push('path found');
 			do {
-				console.log(cur);
+				out.push(cur);
 				let prev = M.get(cur);
 				let c = Flows.get(`${prev} ${cur}`);
 				if (!c)
@@ -106,7 +106,7 @@ D t 10
 				cur = prev;
 			} while (true);
 
-			console.log(`bottleneck is ${bottle}`);
+			out.push(`bottleneck is ${bottle}`);
 
 			// augment
 			cur = Sink;
