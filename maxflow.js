@@ -87,7 +87,7 @@ D t 10
 				}
 
 				out.push(`max flow is ${total}`);
-				document.querySelector("#output").innerHTML = out.join('');
+				document.querySelector("#output").innerHTML = `<pre> ${out.join('')} </pre>`;
 				return;
 			}
 
