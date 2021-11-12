@@ -48,6 +48,10 @@ D t 10
 	let Sink   = "t";
 
 	// Loops over all possible augmenting paths in network flow
+	//
+	console.log('original graph');
+	print_flows();
+	console.log('');
 	 
 	// Will end when no more augmenting paths are found
 	while (true) {
@@ -123,14 +127,15 @@ D t 10
 			out.push(path.join(' '));
 			out.push(`bottleneck is ${bottle}`);
 
-			// augment
+			// augment; remove edges if flow is 0
+			// add residual edges with negative values if needed
 			cur = Sink;
 			while (cur != Source) {
 				let prev = M.get(cur);
 				let f = Flows.get(`${prev} ${cur}`) || 0;
 				let r = Flows.get(`${cur} ${prev}`) || 0;
-				// is normal flow?
 				if (f > 0) {
+					// normal flow
 					if (f - bottle > 0) {
 						Flows.set(`${prev} ${cur}`, f - bottle); // residual
 					} else {
@@ -139,6 +144,7 @@ D t 10
 
 					Flows.set(`${cur} ${prev}`, r - bottle);
 				} else {
+					// residual flow
 					if (r + bottle < 0) {
 						Flows.set(`${prev} ${cur}`, r + bottle);
 					} else {
@@ -150,7 +156,9 @@ D t 10
 
 				cur = prev;
 			}
-
+ 
+			// print updated flow
+			console.log('');
 			print_flows();
 		}
 
