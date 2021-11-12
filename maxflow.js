@@ -1,8 +1,11 @@
+// implements the maximum flow in a network graph algorithm using edmonds karp
 (function maxflow() {
+	// setup syntax highlighting and add source code
 	document.querySelector("#source").innerHTML = `<pre><code class="language-javascript">${maxflow.toString()}</code></pre>`
 	hljs.highlightAll();
 	console.log('highlighted');
 
+	// the graph from  ...
 	Graph = `
 s A 10
 s C 8
@@ -14,11 +17,17 @@ D B 8
 D t 10
 `;
 
+
 	let out = [];
 
+	// Flows is a map of edges and flow; Flows.get("A B") == 5
 	let Flows = new Map();
+
+	// Nodes is a map where key is a node and value is set of nodes that can be
+	// potentially reached; Nodes["s"] == ["A", "B"]
 	let Nodes = new Map();
 
+	// Convert string of Graph and populate Nodes and Flows
 	Graph.match(/\w \w \d+/g).forEach(m => {
 		let [a, b, c] = m.match(/\w+/g);
 
@@ -34,52 +43,53 @@ D t 10
 			out.push(`flow of ${f} is ${Flows.get(f)}`);
 	}
 
-	print_flows();
-
+	// source and sink of network graph
 	let Source = "s";
 	let Sink   = "t";
 
-	let step = 0;			
-
-	// will break when no more augmenting paths are found
+	// Loops over all possible augmenting paths in network flow
+	 
+	// Will end when no more augmenting paths are found
 	while (true) {
 
-		// key is a node; value is previous node that reaches this node
-		let M = new Map(); // temporary information
+		// key is a node; value is previous node that reaches this node on a augmenting path
+		let M = new Map();
 
-		// find shorthest path bread first
 		try {
+			// try find shorthest path bread first
 			let Q = [Source] // a queue
 			let S = 0;
 			while (true) {
+				// cant find a path anymore
 				if (Q.length == 0)
 					throw "ready";
 
 				cur = Q.pop();
 				nds = Nodes.get(cur);
 
-				// get neighbours
+				// get neighbours of node on possible path
 				for(let id of nds.keys()) {
-					if (M.get(id)) // visited already; can safely ignore cycles
+					if (M.get(id)) // visited already
 						continue;
 
 					if (id == Sink)  {
-						M.set(Sink, cur); // set previous ro regain path taken
+						// found a path
+						M.set(Sink, cur); 
 						throw "Sink found"
 					}
 
-					// flow and reverse flow
+					// find possible flow
 					let f = Flows.get(`${cur} ${id}`) || 0; 
 
-					if (f) { // flow or residual flow
-						Q.unshift(id);  // push in front of queue
-						M.set(id, cur); // previous
+					if (f) { // flow or residual flow found; so path possible
+						Q.unshift(id);  
+						M.set(id, cur); 
 					}
 				}
 			}
-			// no augmenting paths found; so done
 		} catch (exp) {
 			if (exp == 'ready') {
+				// done; caclulate total flow into sink
 				let total = 0;
 				for(let f of Flows.keys()) {
 					if (f.match(/t.+/)) 
@@ -91,17 +101,20 @@ D t 10
 				return;
 			}
 
-			// calc bottle neck
+			// calc bottle neck of found path
 			let cur = Sink;
 			let bottle = 9999;
 
-			out.push('path found');
+			out.push('')
+			out.push('augmenting path found:');
 			do {
-				out.push(cur);
+				out.push(`cur`);
 				let prev = M.get(cur);
-				let c = Flows.get(`${prev} ${cur}`);
-				if (!c)
+				if (!prev)
 					break;
+
+				let c = Flows.get(`${prev} ${cur}`);
+
 				bottle = Math.min(bottle, c);
 				cur = prev;
 			} while (true);
