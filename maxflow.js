@@ -107,8 +107,9 @@ D t 10
 
 			out.push('')
 			out.push('augmenting path found:');
+			let path = []
 			do {
-				out.push(`cur`);
+				path.unshift(`${cur}`);
 				let prev = M.get(cur);
 				if (!prev)
 					break;
@@ -119,6 +120,7 @@ D t 10
 				cur = prev;
 			} while (true);
 
+			out.push(path.join(' '));
 			out.push(`bottleneck is ${bottle}`);
 
 			// augment
