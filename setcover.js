@@ -82,7 +82,7 @@
 			for(let x of P[y]) {
 				s.push(x)
 			}
-			r.push(s.join(' ');
+			r.push(s.join(' '));
 		}
 
 		document.querySelector("#output").innerHTML = `<pre> ${r.join('\n')} </pre>`;
