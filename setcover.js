@@ -1,6 +1,6 @@
-(function () {
+(function main() {
 	// set cover problem solved by Algorithm X
-	document.querySelector("#source").innerHTML = `<pre><code class="language-javascript">${maxflow.toString()}</code></pre>`
+	document.querySelector("#source").innerHTML = `<pre><code class="language-javascript">${main.toString()}</code></pre>`
 	hljs.highlightAll();
 
 	// from wikipedia
