@@ -85,6 +85,8 @@
 			r.push(s.join(' '));
 		}
 
+		r.push(`rows selected are: ${path.join(',')}`);
+
 		document.querySelector("#output").innerHTML = `<pre> ${r.join('\n')} </pre>`;
 	}
 })();
