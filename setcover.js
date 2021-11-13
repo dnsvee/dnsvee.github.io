@@ -73,7 +73,20 @@
 	}
 
 	// start here
-	step(Rs, Cs);
+	try {
+		step(Rs, Cs);
+	} catch (exp) {
+		let r = [];
+		for(let y = 0; y < P.length; y++) {
+			let s = [`row ${y}:`];
+			for(let x of P[y]) {
+				s.push(x)
+			}
+			r.push(s.join(' ');
+		}
+
+		document.querySelector("#output").innerHTML = `<pre> ${r.join('\n')} </pre>`;
+	}
 })();
 
 
