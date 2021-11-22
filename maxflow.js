@@ -1,11 +1,15 @@
-// implements the maximum flow in a network graph algorithm using edmonds karp
+// implements the edmonds-karp algorithm for finding the maximum flow in a network graph 
+// in a graph with vertices and edges; imagine an edge is a waterpipe that allows a maximum flow throughput
+// this is the total capacity of the edge; pick one vertice as the source and another as the sink
+// max flow of a graph is the sum of the flow into the sink graph respecting the max capacity
+// of each edge
+//
 (function maxflow() {
 	// setup syntax highlighting and add source code
-	document.querySelector("#source").innerHTML = `<pre><code class="language-javascript">${maxflow.toString()}</code></pre>`
+	document.querySelector("#source").innerHTML = `<pre><code class="language-javascript">${maxflow.toString()}</code></pre>`;
 	hljs.highlightAll();
-	console.log('highlighted');
 
-	// the graph from  ...
+	// a graph; syntax is source dest maxcapacity
 	Graph = `
 s A 10
 s C 8
@@ -17,14 +21,14 @@ D B 8
 D t 10
 `;
 
-
+	// output string
 	let out = [];
 
-	// Flows is a map of edges and flow; Flows.get("A B") == 5
+	// Flows maps edges to flows; key = 's A', value = 10
 	let Flows = new Map();
 
-	// Nodes is a map where key is a node and value is set of nodes that can be
-	// potentially reached; Nodes["s"] == ["A", "B"]
+	// Nodes maps node to list of node reachable by edge
+	// key = "A", value = ["B", "C"]
 	let Nodes = new Map();
 
 	// Convert string of Graph and populate Nodes and Flows
@@ -38,9 +42,10 @@ D t 10
 		Flows.set(`${a} ${b}`, parseInt(c));
 	});
 
+	// textual display of flows in graph
 	function print_flows() {
 		for(let f of Flows.keys())
-			out.push(`flow of ${f} is ${Flows.get(f)}`);
+			out.push(`Flow of ${f} is ${Flows.get(f)}`);
 	}
 
 	// source and sink of network graph
@@ -49,13 +54,12 @@ D t 10
 
 	// Loops over all possible augmenting paths in network flow
 	//
-	console.log('original graph');
+	out.push('The starting graph is');
 	print_flows();
 	console.log('');
 	 
-	// Will end when no more augmenting paths are found
+	// Loop over all augmening paths
 	while (true) {
-
 		// key is a node; value is previous node that reaches this node on a augmenting path
 		let M = new Map();
 
