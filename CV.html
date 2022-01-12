@@ -1,197 +1,343 @@
 <html>
-	<style>
-		#part1 {
-			border-top: 8px solid #dfded4;
-			border-bottom: 8px solid #dfded4;
-			display: grid;
-			grid-template-columns: 1fr 1fr 3fr;
-			background-color: #f1f4f4;
+	<!DOCTYPE html>
+	<head>
+		<link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/symbola" type="text/css"/>
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
+
+		<style>
+
+body {
+	height: 297mm;
+}
+
+#main {
+	font-family: "Arial", sans;
+	font-size: 14px;
+	background-color: white;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 4.5cm 2.7cm 4cm 6cm 8cm;
+	gap: 2.2em;
+	height: 297mm;
+}
+
+
+
+		.circle {
+			width: 8px;
+			margin-right: 1em;
+			margin-left: 1em;
 		}
 
-		#part2 {
-			display: grid;
-			grid-template-columns: 2fr 1fr 6fr;
-		}
-
-		#part3 {
-			display: grid;
-			grid-template-columns: 2fr 1fr 6fr;
-		}
-
-		#part4 {
-			display: grid;
-			grid-template-columns: 2fr 1fr 6fr;
-		}
-
-		table thead {
-			border: 2px solid black;
-		}
-
-		table thead:firstchild {
-		}
-
-		#ranking {
-			line-height: 0.4em;
-			display: grid;
-			grid-template-columns: 2fr 1fr 3fr;
-		}
-
-		#myname {
-			display: flex;
-			justify-content: flex-start;
-			align-self: bottom;
-			flex-direction: column;
-			font-size: 24px;
+		h2 {
+			border-top-left-radius: 8px;
+			border-top-right-radius: 8px;
+			margin-top: 0;
 			text-align: center;
-			max-height: 150px;
-		}
-
-		#geb {
-			font-size: 14px;
-		}
-
-		body {
-			font-family: droid sans mono;
-			font-size: 13px;
-		}
-
-		h1 { 
-			font-size: 13px;
-		}
-
-		img {   
-			border: 2px solid cream;
-			background-color: white;
-			max-width: 200px;
-		}
-
-		thead td {
-			border-bottom: 2px solid black;
+			padding-top: 10px;
+			padding-bottom: 10px;
 		}
 
 		.atitle {
-			border-top: 3px solid #dfded4;
-			border-bottom: 3px solid #dfded4;
-			background-color: #f1f4f4;
+			background-color: #4e4b58;
+			background: linear-gradient(90deg, #6b6975 0%, #4e4b58 100%);
+			color: #cac8d0;
+			font-size: 18px;
+			font-family: 'courier new', mono;
+			border: 0.5mm solid #4e4b58;
 		}
-	</style>
+
+		.card {
+			box-shadow: 0 6px 10px 0 rgba(0,0,0,0.2);
+			background-color: #cac8d0;
+			border-radius: 8px;
+			background: linear-gradient(135deg, #cac8d0 0%, #b0aeb7 100%);
+		}
+
+		#personalia {
+			font-family: 'Courier New', Mono;
+			grid-column-start: 1;
+			grid-column-end: 2;
+			grid-row-start: 2;
+			grid-row-end: 4;
+			box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+			font-size: 20px;
+		}
+
+		#details {
+			margin-left: 0.5em;
+		}
+
+		#details td {
+			font-size: 10px;
+			padding-bottom: 0.5em;
+			padding-right: 1em;
+		}
+
+		#vitae {
+			position: relative;
+			grid-column-start: 1;
+			grid-column-end: 4;
+			grid-row-start: 1;
+			grid-row-end: 2;
+			text-align: center;
+			font-size: 32px;
+			padding-left: 1em;
+			font-variant: small-caps;
+			padding-right: 1em;
+			letter-spacing: 4px;
+			font-weight: bold;
+			background: linear-gradient(90deg, #cac8d0 0%, #4e4b58 100%);
+			background-color: #4e4b58;
+			background-color: #cac8d0;
+			display: grid;
+			grid-template-columns: 1fr 8fr;
+			grid-template-rows: 2.25cm 2.25cm;
+			border: 1.5mm solid #4e4b58;
+		}
+
+		#myface {   
+			width: auto;
+			grid-column-start: 1;
+			grid-column-end: 2;
+			grid-row-start: 1;
+			grid-row-end: 2;
+			height: 4.3cm;
+			position: absolute;
+			left: -1em;
+			top: -1mm;
+			border-radius: 8px 0px 0px 8px;
+		}
+
+		#curriculum {
+			color: #9793a2;
+
+			filter: brightness(120%);
+			text-shadow: 2px 2px 2px #4e4b58;
+			font-variant: small-caps;
+			font-size: 32px;
+			letter-spacing: 14px;
+
+			grid-column-start: 2;
+			grid-column-end: 3;
+			grid-row-start: 1;
+			grid-row-end: 2;
+		}
+
+		#mijnnaam {
+			color: #4e4b58;
+			font-FAMILY: serif;
+			font-size: 30px;
+			grid-column-start: 2;
+			grid-column-end: 3;
+			grid-row-start: 2;
+			grid-row-end: 3;
+		}
+
+		#introtext {
+			grid-column-start: 2;
+			grid-column-end: 4;
+			grid-row-start: 2;
+			grid-row-end: 5;
+			line-height: 130%;
+			font-size: 15px;
+		}
+
+		#introtext_padding {
+			padding-left: 1em;
+			padding-right: 0.2em;
+		}
+
+
+		#personalia p {
+			font-size: 14px;
+		}
+
+		#talen {
+			grid-row-start: 5;
+			grid-row-end: 6;
+			position: relative;
+		}
+
+		.talencontainer {
+			position: absolute;
+			margin: auto;
+		}
+
+		td {
+			font-size: 14px;
+		}
+
+		#persoonlijkeskills {
+			position: relative;
+		}
+
+		.rankingpersoonlijkeskills {
+			position: absolute;
+			display: grid;
+			grid-template-columns: 1fr 6fr;
+			grid-template-rows: repeat(7, 9mm);
+			align-items: center;
+			width: 100%;
+			line-height: 110%;
+		}
+
+		#interesses {
+			grid-row-start: 4;
+			grid-row-end: 5;
+			position: relative;
+		}
+
+		.rankinginteresses {
+			display: grid;
+			grid-template-columns: 1fr 6fr;
+			grid-template-rows: repeat(4, 9mm);
+			align-items: center;
+			margin-left: auto;
+			line-height: 110%;
+			position: absolute;
+		}
+
+		#digitaleskills {
+			position: relative;
+		}
+
+		.rankingskills {
+			display: grid;
+			grid-template-columns: 2fr 3fr;
+			grid-template-rows: repeat(8, 2em);
+			align-items: center;
+			grid-column-gap: 1em;
+			grid-row-gap: 0em;
+			height: 97mm;
+			position: absolute;
+			margin: auto;
+			margin-left: 1em;
+		}
+
+
+		.step1 {
+			margin-left: 1.0em;
+		}
+
+		.step2 {
+			margin-left: 5.0em;
+		}
+
+		progress {
+			border-radius: 2px; 
+			height: 10px;
+			width: 64px;
+		}
+		progress::-webkit-progress-bar {
+			background-color: #cac8d0;
+			border: 2px solid #4e4b58;
+		}
+		progress::-webkit-progress-value {
+			background-color: #4e4b58;
+
+		}
+
+		.persoonlijkheidposition {
+			display: grid;
+			grid-template-columns: 1fr 6fr;
+		}
+
+		.centering {
+			margin: auto;
+		}
+
+		</style>
+	</head>
 	<body>
-		<div id='part1'>
-			<img src="face.png"></img>
-			<div>
-				<div id='myname'>
-					<p>Dennis Verzijl</p>
-					<p id='geb'>(3 sep 1975)</p>
-					<div></div>
-				</div>
+		<div id='main'>
+			<div class='card' id='vitae'>
+				<img id='myface' src="face.png"></img>
+				<p id='curriculum'>CURRICULUM VITAE</p>
+				<p id='mijnnaam'>Dennis Verzijl</p>
 			</div>
-		</div>
-		<div id='part2'>
-			<div>
-				<h2 class='atitle'>Contact</h2>
-				<p>📬 dnsverzijl@gmail.com</p>
-				<p>☎ 0638883860</p>
-				<p>🏠 Dordrecht</p>
-				<h2 class='atitle'>Opleiding</h2>
-				<p>HBO Informatica 1992-1996</p>
-				<p>te Breda. Afgestudeerd.</p>
-			</div>
-			<div></div>
-			<div>
-				<h2 class='atitle'>Introductie</h2>
-				<p>Mijn naam is Dennis Verzijl. Oorspronkelijk ben ik opgeleid als software ontwikkelaar aan de Hogeschool Breda van 1992 tot 1996. Afgezien van een korte periode na mijn afstuderen heb ik nooit gewerkt in de IT-wereld. Ik ben bezig geweest met persoonlijke projecten en heb geleefd van eigen vermogen. Het afgelopen jaar heb ik voor mijn moeder gezorgd die ernstig ziek was geworden.</p>
-				<p>Ik wil nu graag als ITer werken. Ik heb een GitHub (https://github.com/dnsvee) en een GitPage (https://dnsvee.github.io/) waar ik persoonlijke projecten upload. Mijn voorkeur gaat er naar uit om te beginnen als software ontwikkelaar of tester. Natuurlijk ben ik ook bereid om andere kansen aan te grijpen. Ik ben woonachtig in Dordrecht en kan reizen naar steden in mijn regio zoals Rotterdam, Breda, Gouda. Ik heb geen rijbewijs.</p>
-			</div>
-		</div>
-		<div id='part3'>
-			<div>
-				<h2 class='atitle'>Digitale skills</h2>
-				<div id='ranking'>
-					<div>
-						<p>Java</p>
-						<p>Python</p>
-						<p>JavaScript</p>
-						<p>C++</p>
-						<p>HTML</p>
-						<p>CSS</p>
-						<p>Linux</p>
-						<p>ViM</p>
-					</div>
-					<div>
-					</div>
-					<div>
-						<p>★★★★☆</p>
-						<p>★★★★☆</p>
-						<p>★★★★☆</p>
-						<p>★★★★☆</p>
-						<p>★★★☆☆</p>
-						<p>★★★☆☆</p>
-						<p>★★★☆☆</p>
-						<p>★★★☆☆</p>
-					</div>
-				</div>
-			</div>
-			<div>
-			</div>
-			<div>
-				<h2 class='atitle'>Persoonlijke skills</h2>
-				<div>
-					<ul>
-						<li>Gestructureerd</li>
-						<li>Analytisch &amp; probleemoplossend</li>
-						<li>Zelflerend (nieuwe technologiën)</li>
-						<li>Zelfkritisch</li>
-						<li>Voorzichtig</li>
-						<li>Beschouwend</li>
-						<li>Vriendelijk</li>
-					</ul>
-				</div>
-			</div>
-		</div> <!-- part2 -->
 
-		<div id='part4'>
-			<div>
-				<h2 class='atitle'>Talen</h2>
-				<div id='ranking'>
+			<div class='card' id='personalia'>
+				<h2 class='atitle'>Personalia</h2>
+				<div id='details'>
 					<table>
-					<thead>
-					<tr>
-						<td></td>
-						<td>Nederlands</td>
-						<td>Engels</td>
-					</tr>
-					</thead>	
-					<tbody>
-						<tr>
-						<td>Lezen</td>
-						<td>★★★★★</td>
-						<td>★★★★★</td>
-						</tr>
-
-						<tr>
-						<td>Schrijven</td>
-						<td>★★★★★</td>
-						<td>★★★★★</td>
-						</tr>
-
-						<tr>
-						<td>Spreken</td>
-						<td>★★★★★</td>
-						<td>★★☆☆☆</td>
-						</tr>
-					</tbody>
+						<tr><td><img src='gmail.png'/></td><td><p>dnsverzijl@gmail.com</p></td></tr>
+						<tr><td><img src='phone.png'/></td><td><p>0638883860</p></td></tr>
+						<tr><td><img src='map.png'/></td><td><p>Dordrecht</p></td></tr>
+						<tr><td><img src='calendar.png'/></td><td><p>3 september 1975</p></td></tr>
+						<tr><td><img src='school.png'/></td><td><p>HBO Informatica</p><td></tr>
+						<tr><td></td><td><p>Avans Hogeschool Breda<p></td></tr>
 					</table>
 				</div>
 			</div>
-			<div></div>
-			<div>
+
+			<div class='card' id='introtext'>
+				<h2 class='atitle'>Introductie</h2>
+				<div id='introtext_padding'>
+					<p> Mijn naam is Dennis Verzijl. Ik ben opgeleid als informaticus aan de Avans Hogeschool te Breda en ben op zoek naar een baan als ITer; bij voorkeur als programmeur of tester. Natuurlijk ben ik ook bereid om andere kansen aan te grijpen.</p>
+					<p>Na mijn afstuderen heb ik een jaar lang gewerkt als tester van C++ code. Nadat mijn werk klaar was ben ik niet meer actief geweest als programmeur.</p>
+					<p>Het afgelopen jaar was ik mantelzorger van mijn moeder. Nu deze periode er opzit wil ik weer aan de slag. 
+					<p>Ik ben altijd zelfstandig bezig geweest met computers en programmeren. Zo ben ik overgestapt van Windows naar Linux (Ubuntu en Arch); heb ik de nieuwste ontwikkelingen gevolgd rond C++; en zelfstandig Java, Javascript, HTML en CSS geleerd. Op mijn GitHub (github.com/dnsvee) en GitPage (dnsvee.github.io/) upload ik persoonlijke projecten. Ook ben ik actief op de sites HackerRank en LeetCode (zie mijn GitPage).</p>
+					<p>Ik ben woonachtig in Dordrecht. Aangezien ik geen rijbewijs heb reis ik met fiets en OV naar plaatsen in mijn regio zoals Rotterdam, Breda en Gouda.</p>
+				</div>
+			</div>
+
+			<div id='interesses' class='card'>
 				<h2 class='atitle'>Interesses</h2>
-				<ul>
-					<li>Programmeren</li>
-					<li>Lezen (Engelstalige literatuur)</li>
-					<li>Muziek (Heavy Metal)</li>
-					<li>Levensbeschouwing (Boeddhisme, Stoicisme)</li>
-				</ul>
+				<div class='rankinginteresses' style='line-height: 90%'>
+					<img class='circle' src='circle.png'/><p>Programmeren</p>
+					<img class='circle' src='circle.png'/><p>Lezen (Engelse literatuur)</p>
+					<img class='circle' src='circle.png'/><p>Muziek (Heavy Metal)</p>
+					<img class='circle' src='circle.png'/><p>Levensbeschouwing (Boeddhisme, Stoïcisme)</p>
+				</div>
+			</div>
+
+
+			<div class='card' id='talen'>
+				<h2 class='atitle'>Talen</h2>
+				<div class='talencontainer'>
+					<p class='step1'><img src='neth.png' style='width: 24px; padding-right: 1em;'>Nederlands</p>
+					<table class='step2'>
+						<tr><td>Lezen</td><td><progress value='100' max='100'></progress></td></tr>
+						<tr><td>Schrijven</td><td><progress value='100' max='100'></progress></td></tr>
+						<tr><td>Spreken</td><td><progress value='100' max='100'></progress></td></tr>
+					</table>
+
+					<p class='step1'><img src='engl.png' style='width: 24px; padding-right: 1em;'/>Engels</p>
+					<table class='step2'>
+						<tr><td>Lezen</td><td><progress value='100' max='100'></progress></td></tr>
+						<tr><td>Schrijven</td><td><progress value='100' max='100'></progress></td></tr>
+						<tr><td>Spreken</td><td><progress value='60' max='100'></progress></td></tr>
+					</table>
+				</div>
+			</div>
+
+			<div class='card' id='digitaleskills'>
+				<h2 class='atitle'>Skills</h2>
+				<div class='rankingskills'>
+					<span>Python</span><progress value='90' max='100'></progress>
+					<span>C++</span><progress value='90' max='100'></progress>
+					<span>Java</span><progress value='80' max='100'></progress>
+					<span>JavaScript</span><progress value='80' max='100'></progress>
+					<span>Linux</span><progress value='70' max='100'></progress>
+					<span>HTML</span><progress value='70' max='100'></progress>
+					<span>CSS</span><progress value='70' max='100'></progress>
+					<span>ViM</span><progress value='70' max='100'></progress>
+				</div>
+			</div>
+
+
+			<div class='card' id='persoonlijkeskills'>
+				<h2 class='atitle'>Persoonlijkheid</h2>
+				<div class='rankingpersoonlijkeskills'>
+					<img class='circle' src='circle.png'/><span>Gestructureerd</span>
+					<img class='circle' src='circle.png'/><span>Analytisch</span>
+					<img class='circle' src='circle.png'/><span>Kwaliteitsgericht</span>
+					<img class='circle' src='circle.png'/><span>Probleemoplossend</span>
+					<img class='circle' src='circle.png'/><span>Zelflerend</span>
+					<img class='circle' src='circle.png'/><span>Beschouwend</span>
+					<img class='circle' src='circle.png'/><span>Vriendelijk</span>
+				</div>
 			</div>
 		</div>
 	</body>
