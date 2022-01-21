@@ -24,7 +24,9 @@ body {
 	height: 297mm;
 }
 
-
+		.lightbg {
+			background-color: #d7d6d7;
+		}
 
 		.circle {
 			width: 8px;
@@ -43,16 +45,16 @@ body {
 
 		.atitle {
 			background-color: #4e4b58;
-			color: #cac8d0;
+			color: #d7d6d7;
 			font-size: 18px;
 			font-family: 'courier new', mono;
 		}
 
 		.card {
 			box-shadow: 0 6px 10px 0 rgba(0,0,0,0.2);
-			background-color: #cac8d0;
+			background-color: #d7d6d7;
 			border-radius: 8px;
-			background: linear-gradient(135deg, #cac8d0 0%, #b0aeb7 100%);
+			background: linear-gradient(135deg, #d7d6d7 0%, #b0aeb7 100%);
 		}
 
 		#personalia {
@@ -88,11 +90,10 @@ body {
 			padding-right: 1em;
 			letter-spacing: 4px;
 			font-weight: bold;
-			background: linear-gradient(90deg, #cac8d0 0%, #4e4b58 100%);
-			background-color: #4e4b58;
-			background-color: #cac8d0;
+			background: linear-gradient(90deg, #d7d6d7 0%, #4e4b58 100%);
+			background-color: #d7d6d7;
 			display: grid;
-			grid-template-columns: 1fr 100fr;
+			grid-template-columns: 1fr 8fr;
 			grid-template-rows: 2.25cm 2.25cm;
 			border: 1.5mm solid #4e4b58;
 		}
@@ -107,6 +108,7 @@ body {
 			position: absolute;
 			left: -1em;
 			top: -1mm;
+			border-radius: 0px 0px 0px 0px;
 		}
 
 		#curriculum {
@@ -230,7 +232,7 @@ body {
 			width: 64px;
 		}
 		progress::-webkit-progress-bar {
-			background-color: #cac8d0;
+			background-color: #d7d6d7;
 			border: 2px solid #4e4b58;
 		}
 		progress::-webkit-progress-value {
@@ -252,6 +254,7 @@ body {
 	<body>
 		<div id='main'>
 			<div class='card' id='vitae'>
+				<img id='myface' src="face.png"></img>
 				<p id='curriculum'>CURRICULUM VITAE</p>
 				<p id='mijnnaam'>Dennis Verzijl</p>
 			</div>
