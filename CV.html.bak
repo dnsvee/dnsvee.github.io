@@ -289,11 +289,17 @@ body {
 					<p>Na mijn afstuderen heb ik een jaar lang gewerkt als fulltime uitzendkracht bij een IT bedrijf als tester van C++ code. Nadat mijn werk klaar was ben ik niet meer actief geweest als programmeur. Het afgelopen jaar was ik mantelzorger van mijn moeder. Nu deze periode erop zit wil ik weer aan de slag. 
 					<p>Ik ben altijd actief geweest met computers en programmeren. Zo ben ik overgestapt van Windows naar Linux (Ubuntu en Arch), heb ik de nieuwste ontwikkelingen gevolgd rond C++, en zelfstandig Java, Javascript, HTML en CSS geleerd. Op mijn GitHub (github.com/dnsvee) en GitPage (dnsvee.github.io/) upload ik persoonlijke projecten. Ook ben ik actief op de sites HackerRank en LeetCode (zie mijn GitPage).</p>
 					<p>Ik ben woonachtig in Dordrecht en reis met fiets en/of OV. Ik zoek werk in de regio Rotterdam, Breda, Gouda.</p>
+					
+					Chronologie
+					1996-1998 Tester van C++ code bij TLO Holland Controls
+					1999-2018 Persoonlijke belegger op de beurs
+					2019-2021 Mantelzorger van mijn moeder
+					
 				</div>
 			</div>
 
 			<div id='interesses' class='card'>
-				<h2 class='atitle'>Interesses</h2>
+				<h2 class='atitle'>Interesse</h2>
 				<div class='rankinginteresses' style='line-height: 120%'>
 					<img class='circle' src='circle.png'/><p>Programmeren</p>
 					<img class='circle' src='circle.png'/><p>Lezen (Engelse literatuur)</p>
