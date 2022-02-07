@@ -297,6 +297,15 @@ body {
 					
 				</div>
 			</div>
+			
+			<div id='Chronologie' class='card'>			
+				<div class='rankinginteresses' style='line-height: 120%'>
+					<p>1998-2000</p><p>Tester C++ bij TLO Holland Controls`</p>
+					<p>2000-2018</p><p>Persoonlijke Belegger (aandelen en opties)</p>
+					
+					<img class='circle' src='circle.png'/><p>Levensbeschouwing (Boeddhisme, Stoïcisme)</p>
+				</div>
+			</div>
 
 			<div id='interesses' class='card'>
 				<h2 class='atitle'>Interesse</h2>
