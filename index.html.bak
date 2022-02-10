@@ -1,0 +1,27 @@
+<!DOCTYPE html5>
+<!~-
+Index.html for algorithm overview
+~-!>
+
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<link href='styles.css' rel='stylesheet'/>
+	</head>
+		<h1>Implementation of CS Algorithms and other things</h1>
+			<p><a href='sorting.html'>This</a> page demonstrates some common sorting algorithms.</p>
+			<p><a href='mazes.html'>This</a> demonstrates several maze generation algorithms and a recursive backtracker that solves each maze.</p>
+			<p><a href='zebra.html'>Here</a>  is a solution to zebra/Einstein puzzle from <a href='http://rosettacode.org/wiki/Zebra_puzzle'>RosettaCode</a>.</p>
+			<p><a href='dp.html'>Here</a> is a page with several algorithms commonly solved using dynamic programming.</a></p>
+			<p><a href='asearch.html'>Here</a> is a page with an implementation of the A* search algorithm.</p>
+			<p><a href='galeshapley.html'>Here</a> is a demo of the Gale-Shapley algorithm solving a problem regarding matching of Students and Hospitals.</p>
+			<p><a href='treap.html'>Here</a> an implementation of a Treap data structure.</p>
+			<p><a href='maxflow.html'>Here</a> is an implementation of the maximum flow in a network graph (Edmonds-Karp algorithm).</p>
+			<p><a href='setcover.html'>Here</a> is an implementation of algorithm X to solve the set cover problem.</p>
+			<p><a href='leetcode.html'>Here</a> is a page summarizing some of my solutions to problems from the LeetCode website featuring programming challenges.</p>
+			<p><a href='hackerrank.html'>Here</a> is a page summarizing some of my solutions to problems from the HackerRank coding website.</p>
+			<p>My <a href='https://github.com/dnsvee'>GitHub</a> profile.</p>
+
+		<script src='index.js'>JavaScript not enabled</script>
+	</body>
+</html>
