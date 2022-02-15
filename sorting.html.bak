@@ -21,10 +21,12 @@
 			<a id='back' href='/index.html'>Back</a>
 			<div id='middle'>
 				<h1>Sorting algorithms in JavaScript</h1>
-				<p>Here are some of my personal implementations for several sorting algorithms. For each algorithm the source code is displayed and the last section of the webpage runs a performance comparison for each algorithm.</p> 
+				<p>Here are some of my personal implementations for several sorting algorithms. For each algorithm the source code is displayed and the last section of the webpage runs a performance comparison on each algorithm.</p> 
 				<div>
 
-					
+					<h2 id='perfh2'>Performance test (sort 1000 random numbers)</h2>
+					<label id='report'>
+					</label>
 
 
 					<h2 id='header'>Swap sort</h2>
@@ -57,9 +59,6 @@
 					<p>A binary heap is an array that contains a binary tree. A parent node of index i has child nodes at location i * 2 and i * 2 + 1. A max. heap has at it's root the maximum value of the array. Take an unsorted array and turn it into a heap by ensuring the parent/child relationship holds for each node. By repeatedly popping off this max. value and placing it in the correct place at the end of the array you can sort the unsorted array. On each step the heap becomes one smaller and the sorted array one larger.</p>
 					<p id='heapsort_source'></p>
 
-					<h2 id='perfh2'>Performance test (sort 1000 random numbers)</h2>
-					<label id='report'>
-					</label>
 
 				</div>
 			</div>
