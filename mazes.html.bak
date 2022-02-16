@@ -18,11 +18,12 @@
 <body>
 	<a href='index.html'>BACK</a>
 	<h1>Maze generation algorithms</h2>
-	<p>Here are three different algorithms for generating mazes and each maze is solved by a recursive backtracking algorithm.</p>
+	<p>On this page three different algorithms are demonstrated for generating mazes and each maze is solved by a recursive backtracking algorithm.</p>
+
 
 	<h2>Kruskal's method</h2>
 	<p style='border-left: 5px solid blue; padding-left: 10px;'>
-	Kruskal's method is normally used for constructing a minimal spanning tree for a graph. It can also be used for making a maze. Each cell starts with no open doors aka edges. Pick an edge at random and check if there already exists a route connecting both rooms connected by this edge. If not create the edge. Dont visit this edge again.</p>
+	Kruskal's method is normally used for constructing a minimal spanning tree for a graph. It can also be used for making a maze. Each cell starts with no open doors aka edges. Pick an edge at random and check if there already exists a route connecting both rooms connected by this edge. If not create a connection between both rooms. Dont visit the edge again.</p>
 	<div id='cont'>
 		<canvas style='border: 4px double blue;' id='kruskal_canvas' width='500' height='480'> </canvas>
 		<div id='kruskalsrc'></div>
@@ -30,7 +31,7 @@
 
 
 	<h2>Recursive backtracking</h2>
-	<p style='border-left: 5px solid green; padding-left: 10px;'>Start at some location. For all available edges from this current position which are not already connected to another cell/room pick one at random and create an edge between the cells. Mark this cell as visited and current. Repeat the previous step. Keep track of all previous room visited. When no edges are available backtrack into one of the rooms visited which still has available edges for connecting to unvisited rooms.</p>
+	<p style='border-left: 5px solid green; padding-left: 10px;'>Start at a preferred location. For all available edges from this current position who are not already connected to another cell/room pick one at random and create an edge between the cells. Mark this cell as visited and current. Repeat the previous step. Keep track of all previous room visited. When no edges are available backtrack into one of the rooms visited and which still has available edges for connecting to unvisited rooms.</p>
 	<div id='cont'>
 		<canvas style='border: 4px double green;' id='backtracking_canvas' width='500' height='480'> </canvas>
 		<div id='recbacksrc'></div>
