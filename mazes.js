@@ -196,7 +196,7 @@ import { choice, shuffle } from './util.js';
 	}
 
 	function backtrack(W, H, M) {
-		// backtracking method; pick an unvisited cell at random recursieve
+		// backtracking method; pick an unvisited cell at random
 		
 		// starting point
 		let x = 0, y = 0; 
