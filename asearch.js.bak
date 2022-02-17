@@ -38,7 +38,7 @@ import { between, randint, shuffle } from './util.js'
 		if (e.buttons == 0) 
 			return;
 
-		// check if clicked on a table cell		
+		// check if target == table cell
 		if (e.target.nodeName != "TD")
 			return;
 
@@ -52,7 +52,9 @@ import { between, randint, shuffle } from './util.js'
 	let W  = 20
 	let H  = 20
 
-	// table to use as for displaying the grid
+	// start at 0, 0; find a path toward W, H
+
+	// table to use as display
 	let t = [];
 	for(let y = 0; y < H; y++) {
 		t.push('<tr>');
@@ -65,7 +67,7 @@ import { between, randint, shuffle } from './util.js'
 	wid.innerHTML = t.join('');
 
 	// heuristic function for asearch
-	// combines known cost and a guestimate of cost to reach exit
+	// combines known cost and ia guestimate of cost to reach exit
 	let heur = (i) => i.cost + Math.abs(W - 1 - i.x) +  Math.abs(H - 1 - i.y);
 
 	// function used by priority queue when comparing
@@ -97,7 +99,7 @@ import { between, randint, shuffle } from './util.js'
 
 			let a = this.arr[0];
 
-			// infrontier tracks if a cell is in the Priority Queue
+			// infrontier attr tracks if cells is in Priority Queue
 			a.infrontier = 0;
 
 			if (this.arr.length > 1) {
@@ -146,7 +148,7 @@ import { between, randint, shuffle } from './util.js'
 				this.heapify(e.pos + 1);	
 			}
 
-			// track that cell is in the queue
+			// track that cell is in queue
 			e.infrontier = 1;
 
 			// insert or reinsert
@@ -164,7 +166,8 @@ import { between, randint, shuffle } from './util.js'
 
 			this.arr.push(e);
 
-			// keep track of the position in the queue where the cell is inserted
+			// keep track of the position in the queue where the cell is 
+			// inserted
 			let i = this.arr.length; 
 			this.arr[i - 1].pos = i - 1;
 
@@ -185,12 +188,12 @@ import { between, randint, shuffle } from './util.js'
 				i = r;
 			}
 		}
-	} // class priority queue
+	} // end class PQ
 
 	// the priority queue to use
 	let Pq = new PQ();
 
-	// the maze; 
+	// the maze
 	let M = [];
 
 	// init. the maze
@@ -200,7 +203,7 @@ import { between, randint, shuffle } from './util.js'
 			// from : previous node in least cost path
 			// cost : cost of node so far
 			// pos  : position in queue 
-			// infrontier: is the element in the queue 1==yes, 0==no
+			// infrontier: is the element in the queue
 			// type : terrain type
 			a.push({x: x, y: y, from: null, type: 0, cost: 1000000, pos: -1, infrontier: 0});
 		}	
@@ -210,17 +213,18 @@ import { between, randint, shuffle } from './util.js'
 	// draw char 's' at the pos x, y in the maze
 	let draw = (x, y, s, c = 'black') => {
 		wid.rows.item(y).cells.item(x).textContent = s;
-		wid.rows.item(y).cells.item(x).style.color  = c;
+		wid.rows.item(y).cells.item(x).style.color   = c;
 	}
 
-	// start at top left coordinates (0, 0)
+	// start at 0, 0
 	let m   = M[0][0];
 	m.cost  = 0;
 
 	// insert starting position in the queue
 	Pq.insert(m);
 
-	// offset of all four neighbours of a cell
+
+	// offset of all four neighbours
 	let nbs = [[-1, 0], [1, 0], [0, -1], [0, 1]];
 
 	// do something on each animation frame

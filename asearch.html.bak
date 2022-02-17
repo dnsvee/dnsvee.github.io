@@ -44,7 +44,6 @@
 	<p>An implementation of the A* algorithm.</p>
 	<p>Tries to find a suitable path from upper-left and to bottom-right.</p>
 	<p>Hold down a mouse button and drag the mouse over the grid to place some walls.</p>
-	<p>Reload the page to try again.</p>
 		<button id='start'>Start</button>
 		<table id='wrap'>
 		</table>
