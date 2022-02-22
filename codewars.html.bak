@@ -9,15 +9,15 @@
 				flex-flow: column wrap;
 			}				
 			
-			div.problem:nth-child(1) {
+			.problem p:nth-child(1) {
 			background-color: red;
 			}
 			
-			div.problem:nth-child(2) {
+			.problem p:nth-child(2) {
 			background-color: yellow;			
 			}
 			
-			div.problem:nth-child(3) {
+			.problem p:nth-child(3) {
 			background-color: cyan;			
 			}
 			
