@@ -192,6 +192,81 @@ public class Boggle {
 </code></pre>
 		</div>
 
+
+<div class='problem'>
+<p><a href='https://www.codewars.com/kata/55e2de13b668981d3300003d'>Derivatives of type x^n</a></p>
+<pre>You are provided with a function of the form f(x) = axⁿ, that consists of a single term only and 'a' and 'n' are integers, e.g f(x) = 3x², f(x) = 5 etc.
+
+Your task is to create a function that takes f(x) as the argument and returns the result of differentiating the function, that is, the derivative.
+
+If f(x)=axn f(x) = ax^nf(x)=ax 
+n
+ , then f′(x)=naxn−1 f^{\prime}(x) = nax^{n-1}f 
+′
+ (x)=nax 
+n−1
+ 
+
+Input is a string, for example "5x^4". The function f(x) consists of a single term only. Variable is denoted by x.
+Output should be a string, for example "20x^3".
+
+Examples
+"3x^2"  => "6x"
+"-5x^3" => "-15x^2"
+"6x^-2" => "-12x^-3"
+"5x"    => "5"
+"-x"    => "-1"
+"42"    => "0"</pre>
+<pre><code>
+package com.codewars.huzeifa;
+
+import java.util.regex.*;
+
+public class Derivatives {
+    public static String differentiate(String function) {
+      int mult = 1;
+      
+      Matcher m = Pattern.compile("^(-)(.*)$").matcher(function);
+      if (m.matches()) {
+        mult = -1;
+        function = m.group(2);
+      }
+      
+      m = Pattern.compile("^(\\d+)(.*)$").matcher(function);
+      if (m.matches()) {
+        mult = mult * Integer.valueOf(m.group(1));
+        function = m.group(2);
+      }
+      
+      System.out.printf("f=%s, mult=%d%n", function, mult);
+      
+      if (function.equals("")) {
+        return "0";
+        }
+      
+      if (function.equals("x")) {
+        return String.valueOf(mult);
+      }
+      
+      int pow = 1;
+      m = Pattern.compile("^x\\^(-?\\d+)$").matcher(function);
+      m.matches();
+      pow = Integer.valueOf(m.group(1));
+      
+      mult *= pow;
+      pow  -= 1;
+      
+      if (pow == 0) 
+        return String.valueOf(mult);
+      
+      if (pow == 1)
+        return String.format("%dx", mult);
+      
+      return String.format("%dx^%d", mult, pow);
+    }
+}
+</code></pre>
+</div>
 		
 		
 
