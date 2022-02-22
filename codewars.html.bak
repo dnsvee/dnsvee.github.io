@@ -7,6 +7,7 @@
 			.problem {
 				display: grid;
 				grid-template-rows: 1fr;				
+				gap: 0;
 			}				
 			
 			.problem p:nth-child(1) {
