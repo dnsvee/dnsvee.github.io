@@ -5,8 +5,8 @@
 		<link rel='stylesheet' href='styles.css'>
 		<style>
 			.problem {
-				display: flex;
-				flex-flow: column wrap;
+				display: grid;
+				grid-template-rows: 1fr;				
 			}				
 			
 			.problem p:nth-child(1) {
@@ -18,7 +18,7 @@
 			}
 			
 			.problem p:nth-child(3) {
-			background-color: cyan;			
+			background-color: bluecyan;			
 			}
 			
 		</style>
