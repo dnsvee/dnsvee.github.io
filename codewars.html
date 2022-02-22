@@ -116,6 +116,80 @@ public class SimpleAssembler {
 }
 		</code></pre></div>
 		
+		<div class='problem'>
+		<p><a href='https://www.codewars.com/kata/57680d0128ed87c94f000bfd'>Boggle Word Checker</a></p>
+		<pre>Write a function that determines whether a string is a valid guess in a Boggle board, as per the rules of Boggle. A Boggle board is a 2D array of individual characters, e.g.:
+
+[ ['I','L','A','W'],
+  ['B','N','G','E'],
+  ['I','U','A','O'],
+  ['A','S','R','L'] ]
+Valid guesses are strings which can be formed by connecting adjacent cells (horizontally, vertically, or diagonally) without re-using any previously used cells.
+
+For example, in the above board "BINGO", "LINGO", and "ILNBIA" would all be valid guesses, while "BUNGIE", "BINS", and "SINUS" would not.
+
+Your function should take two arguments (a 2D array and a string) and return true or false depending on whether the string is found in the array as per Boggle rules.
+
+Test cases will provide various array and string sizes (squared arrays up to 150x150 and strings up to 150 uppercase letters). You do not have to check whether the string is a real word or not, only if it's a valid guess.
+</pre>
+<pre><code>
+public class Boggle {
+    
+    String   W;
+    char[][] B;
+    int      w, h;
+    public Boggle(final char[][] board, final String word) {
+        // Your code here!
+      W = word;
+      B = board;
+      h = B.length;
+      w = B[0].length;
+    }
+    
+    public void check2(int j, int i, int c) {
+      if (c == W.length())
+        throw new RuntimeException("");
+      
+      for(int y = -1; y < 2; y++) {
+        for(int x = -1; x < 2; x++) {
+          // out of bounds check
+          if (y + j < 0 || y + j == h || x + i < 0 || x + i == w)
+            continue;
+          
+          // doesnt match character 
+          if (!(W.charAt(c) == B[y + j][x + i]))
+            continue;
+            
+          // temporarily change char at position to prevent double visiting
+          char tmp = B[y + j][x + i];
+          B[y + j][x + i] = '*';
+          check2(j + y, i + x, c + 1);
+          B[y + j][x + i] = tmp;
+        }
+      }
+    }
+  
+    public boolean check() {
+      try {
+        // find suitable starting location
+        for(int j = 0; j < B.length; j++) 
+          for(int i = 0; i < B[j].length; i++) 
+            if (B[j][i] == W.charAt(0)) {
+              char tmp = B[j][i];
+              B[j][i] = '*';
+              check2(j, i, 1);
+              B[j][i] = tmp;
+            }
+      } catch (RuntimeException err) {
+        return true;
+      }
+      
+      // no exception thrown so string not found
+      return false;
+    }
+}
+</code></pre>
+		</div>
 
 		
 		
