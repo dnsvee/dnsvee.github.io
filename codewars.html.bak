@@ -14,12 +14,16 @@
 				background-color: red;
 				margin-top: 0px;
 				margin-bottom: 0px;
+				padding-bottom: 1em;
+				text-size: 14px;
+				padding-left: 2em;
 			}
 			
 			.problem p:nth-child(2) {
 			background-color: yellow;			
 			margin-top: 0px;
 				margin-bottom: 0px;
+				padding-bottom: 1em;
 			}
 			
 			.problem p:nth-child(3) {
