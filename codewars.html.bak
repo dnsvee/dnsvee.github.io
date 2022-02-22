@@ -11,15 +11,21 @@
 			}				
 			
 			.problem p:nth-child(1) {
-			background-color: red;
+				background-color: red;
+				margin-top: 0px;
+				margin-bottom: 0px;
 			}
 			
 			.problem p:nth-child(2) {
 			background-color: yellow;			
+			margin-top: 0px;
+				margin-bottom: 0px;
 			}
 			
 			.problem p:nth-child(3) {
 			background-color: bluecyan;			
+			margin-top: 0px;
+				margin-bottom: 0px;
 			}
 			
 		</style>
