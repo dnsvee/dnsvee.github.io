@@ -216,7 +216,8 @@ Examples
 "6x^-2" => "-12x^-3"
 "5x"    => "5"
 "-x"    => "-1"
-"42"    => "0"</pre>
+"42"    => "0"
+</pre>
 <pre><code>
 package com.codewars.huzeifa;
 
