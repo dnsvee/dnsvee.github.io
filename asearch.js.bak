@@ -31,9 +31,14 @@ import { between, randint, shuffle } from './util.js'
 				}
 			}
 		}
+		start.textContent = 'Reload';
+		start.onclock = () => {
+			window.location.reload();
+		};
 	}
 
-	// draws a wall in the maze
+	// gets called when the mouse moves over the map; when a mouse button is held place a
+	// # symbol in the cell at the right position	
 	let placewall = (e) => {
 		if (e.buttons == 0) 
 			return;
@@ -42,8 +47,8 @@ import { between, randint, shuffle } from './util.js'
 		if (e.target.nodeName != "TD")
 			return;
 
-		e.target.textContent='#';
-		e.target.className = 'red';
+		e.target.textContent= '#';
+		e.target.className  = 'red';
 	};
 
 	wid.addEventListener("mouseover", placewall,  true);
@@ -52,7 +57,7 @@ import { between, randint, shuffle } from './util.js'
 	let W  = 20
 	let H  = 20
 
-	// table to use as for displaying the grid
+	// use a table for the user to draw terrains elements into	
 	let t = [];
 	for(let y = 0; y < H; y++) {
 		t.push('<tr>');
@@ -64,18 +69,18 @@ import { between, randint, shuffle } from './util.js'
 
 	wid.innerHTML = t.join('');
 
-	// heuristic function for asearch
-	// combines known cost and a guestimate of cost to reach exit
+	// the heuristic function used by the a* algo; calculates the cost of a path from start
+	// to finish running to a certain cell by adding the cost from start to this cell
+	// and a heuristic from this cell to the end	
 	let heur = (i) => i.cost + Math.abs(W - 1 - i.x) +  Math.abs(H - 1 - i.y);
 
-	// function used by priority queue when comparing
-	// cells
+	// function used by the priority queue when comparing two cells by cost
 	let cmp = (e0, e1) => {
 		let h0 = heur(e0);
 		let h1 = heur(e1);
 
 		if (h0 == h1) {
-			// tie breaker when heuristic is the same
+			// tie breaker when heuristic is the same; maybe use randomness?
 			let s0 = Math.sqrt(Math.pow(e0.x - W - 1, 2) + Math.pow(e0.y - H - 1, 2));
 			let s1 = Math.sqrt(Math.pow(e1.x - W - 1, 2) + Math.pow(e1.y - H - 1, 2));
 			return s0 < s1;
@@ -84,13 +89,13 @@ import { between, randint, shuffle } from './util.js'
 		return h0 < h1;
 	}
 
-	// priority queue
+	// Priority Queue; orders cells from lowest to highest cost using the heuristic function
 	class PQ {
 		constructor() {
 			this.arr = [];
 		}
 
-		// pop element with least priority
+		// pop element with least cost
 		pop() {
 			if (this.arr.length == 0) 
 				throw "Pq::pop: queue empty";
@@ -112,7 +117,7 @@ import { between, randint, shuffle } from './util.js'
 			return a;
 		}
 
-		// move element down from root to correct location
+		// move element down from root to the correct location
 		heapify(i) {
 			let j = i;
 
@@ -135,7 +140,7 @@ import { between, randint, shuffle } from './util.js'
 			this.heapify(j);
 		}
 
-		// remove element and insert with updated priority
+		// remove element and insert with updated priority/cost
 		update(e) {
 			// is it in the queue already?
 			if (e.infrontier == 1) {
@@ -146,7 +151,7 @@ import { between, randint, shuffle } from './util.js'
 				this.heapify(e.pos + 1);	
 			}
 
-			// track that cell is in the queue
+			// the current cell is in the queue
 			e.infrontier = 1;
 
 			// insert or reinsert
@@ -158,17 +163,17 @@ import { between, randint, shuffle } from './util.js'
 			return this.arr.length;
 		}
 
-		// insert at bottom and move up to right position 
+		// insert cell at the bottom and move up into to right position 
 		insert(e) {
 			e.infrontier = 1;
 
 			this.arr.push(e);
 
-			// keep track of the position in the queue where the cell is inserted
+			// update the position of the cell in the queue			
 			let i = this.arr.length; 
 			this.arr[i - 1].pos = i - 1;
 
-			// insert at the right spot and maintain queue invariants
+			// insert at the right spot 
 			while (i != 1) {
 				let r = Math.floor(i / 2);
 
@@ -187,33 +192,36 @@ import { between, randint, shuffle } from './util.js'
 		}
 	} // class priority queue
 
-	// the priority queue to use
+	// create an instance of the priority queue to use
 	let Pq = new PQ();
 
-	// the maze; 
+	// the grid as a flat array
+	// each index is a object storing per cell information
+	// the cell location of the cell in this array is x * W + y where x, y are the coords
+	// of the cell and W is the width of the grid
 	let M = [];
 
-	// init. the maze
+	// initialize the grid with cells	
 	for(let y = 0; y < H; y++) {
 		let a = [];
 		for(let x = 0; x < W; x++) {
-			// from : previous node in least cost path
-			// cost : cost of node so far
-			// pos  : position in queue 
+			// from      : previous node in least cost path
+			// cost      : cost of node so far
+			// pos       : position in queue 
 			// infrontier: is the element in the queue 1==yes, 0==no
-			// type : terrain type
+			// type      : terrain type
 			a.push({x: x, y: y, from: null, type: 0, cost: 1000000, pos: -1, infrontier: 0});
 		}	
 		M.push(a);
 	}
 
-	// draw char 's' at the pos x, y in the maze
+	// draw char 's' at the pos x, y with color 'c'
 	let draw = (x, y, s, c = 'black') => {
 		wid.rows.item(y).cells.item(x).textContent = s;
 		wid.rows.item(y).cells.item(x).style.color  = c;
 	}
 
-	// start at top left coordinates (0, 0)
+	// start is at top left; coordinates (0, 0)
 	let m   = M[0][0];
 	m.cost  = 0;
 
@@ -226,13 +234,13 @@ import { between, randint, shuffle } from './util.js'
 	// do something on each animation frame
 	function step() {
 		if (!Pq.size()) 
-			// no suitable nodes to explore
+			// no suitable nodes left to explore
 			return;
 
 		// pop lowest cost item
 		let i = Pq.pop(); 
 
-		// if goal reached
+		// if goal is reached
 		if ((i.x == W - 1) && (i.y == H - 1)) {
 			// draw symbol at exit
 			draw(i.x, i.y, '$', 'blue');
@@ -272,15 +280,15 @@ import { between, randint, shuffle } from './util.js'
 
 			let e = M[y0][x0];
 
-			// skip if terrain impassable
+			// skip if the terrain impassable
 			if (e.type == 1) 
 				continue;
 
-			// check if found a cheaper path
+			// check if a cheaper path is found
 			if (i.cost + 1 >= e.cost) 
 				continue;
 
-			// set new cost since a cheaper path was found
+			// set the new cost since a cheaper path was found
 			e.cost = i.cost + 1;
 			e.from = i;
 

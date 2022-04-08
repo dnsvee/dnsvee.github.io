@@ -31,6 +31,10 @@ import { between, randint, shuffle } from './util.js'
 				}
 			}
 		}
+		start.textContent = 'Reload';
+		start.onclick = () => {
+			window.location.reload();
+		};
 	}
 
 	// gets called when the mouse moves over the map; when a mouse button is held place a
