@@ -15,8 +15,7 @@ Index.html for algorithm overview
 			<p><a href='mazes.html'>This</a> demonstrates several maze generation algorithms and a recursive backtracker that solves each maze.</p>			
 			<p><a href='dp.html'>Here</a> is a page with several algorithms commonly solved using dynamic programming.</a></p>
 			<p><a href='asearch.html'>Here</a> is a page with an implementation of the A* search algorithm.</p>			
-						
-			
+									
 			<p>My <a href='https://github.com/dnsvee'>GitHub</a> profile.</p>
 
 		<script src='index.js'>JavaScript not enabled</script>
