@@ -39,7 +39,3 @@ h2, h3 {
 #back {
 	font-size: 20px;
 }
-
-pre { 
-	font-size: 12px;
-}
