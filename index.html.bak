@@ -8,7 +8,7 @@ Index.html for algorithm overview
 		<meta charset='utf-8'>
 		<link href='styles.css' rel='stylesheet'/>
 	</head>
-		<h1>Pages implementing different algorithms and pages featuring my solutions to coding challenges on the sites LeetCode and CodeWars.</p>
+		<h1>Pages implementing different algorithms and pages featuring my solutions to coding challenges on the sites LeetCode and CodeWars.</h1>
 		
 		<p><a href='leetcode.html'>This</a> page summarizes some of my solutions to problems from the LeetCode programming challenges website.</p>
 		
