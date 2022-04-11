@@ -9,10 +9,10 @@
 	<body>
 		<a id='back' href='/index.html'>Back</a>
 		<h1>Links to my LeetCode solutions</h3>
-		<p><a href='https://leetcode.com/'>LeetCode</a> is a website where you can solve programming problems. After writing a solution to a problem you can submit your solution to be tested against numerous testcases. Here I've collected links to my solutions. Unfortunately you can't directly link to a solution and have it tested. These links are of the dicussion forum posts. Click on description to see the problem statement.</p>
+		<p><a href='https://leetcode.com/'>LeetCode</a> is a website featuring programming challenges where you can. After writing a solution to a problem you can submit your solution to be tested against numerous testcases. Here is a collection of links to my personal solutions. Unfortunately you can't directly link to a solution and have it tested. These links are of the dicussion forum posts. Click on description to see the problem statement.</p>
 		
 		<h2>Python</h2>
-		<p><a href='https://leetcode.com/problems/divide-two-integers/discuss/1442656/python-solution-using-recursion'>29: Divide Two Numbers (Python)</a><span class='K'>medium</span><p>
+		<p><a href='https://leetcode.com/problems/divide-two-integers/discuss/1442656/python-solution-using-recursion'>29: Divide Two Numbers (Python)</a><p>
 		<p><a href='https://leetcode.com/problems/longest-valid-parentheses/discuss/1446203/Solution-in-Python-using-stack'>32. Longest Valid Parentheses (Python)</a><p>
 		<p><a href='https://leetcode.com/problems/first-missing-positive/discuss/1429488/Python-solution-with-comments'>41. First Missing Positive (Python)</a><p>
 		<p><a href='https://leetcode.com/problems/check-if-binary-string-has-at-most-one-segment-of-ones/discuss/1796907/Python-solution'>1784. Check if Binary String Has at Most One Segment of Ones</a><p>
