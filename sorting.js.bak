@@ -214,7 +214,7 @@
 		// turn array in a heap
 		makeheap(arr);
 
-		// repeatedly swap maximum value from heap into proper location at the end of the
+		// repeatedly swap maximum value from heap into proper location at the front of the
 		// array
 		let a;
 		for(let i = arr.length; i > 0; i--) {
