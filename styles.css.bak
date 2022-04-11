@@ -24,11 +24,13 @@ h1 {
 	border-bottom: 2px solid black;
 }
 
-h2, h3 {
+h2 {
 	background-color: lightblue;
 	border-top:    2px solid black;
 	border-bottom: 2px solid black;
 }
+
+
 
 .left {
 	border-left: 4px solid blue;
@@ -41,5 +43,5 @@ h2, h3 {
 }
 
 pre { 
-	font-size: 12px;
+	font-size: 14px;
 }
