@@ -38,7 +38,7 @@
 
 
 	<h2>Division method</h2>
-	<p style='border-left: 5px solid yellow; padding-left: 10px;'>For any room in the maze divide it into two rooms with a single corridor connecting them. Keep doing this until the rooms cannot be divided any further.</p>
+	<p style='border-left: 5px solid yellow; padding-left: 10px;'>Split the grid into two halves connected by a single edge. Repeat the process for both rooms until the room becomes too small for division. </p>
 	<div id='cont'>
 		<canvas style='border: 4px double yellow;' id='division_canvas' width='500' height='480'> </canvas>
 		<div id='divmethsrc'></div>
