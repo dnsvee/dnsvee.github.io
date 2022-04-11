@@ -20,44 +20,46 @@ import { choice, shuffle } from './util.js';
 			a[j] = x;
 		}
 	}
-
-	// solvers using backtracking (dfs)	
+	
+	// A Maze is represented by a 2-dimensional array where Maze[y][x] is a code which describes
+	// a room at location (x, y) and it's open corridors connecting the room with another room 
+	// A room is described using a bitflag where
+	// 0b0100 is an open corridor to the east
+	// 0b0001 is an open corridor to the west
+	// 0b1000 is an open corridor to the north
+	// 0b0010 is an open corridor to the south
+	
+	// solver using backtracking (dfs)	
 	// W is width
 	// H is height
-	// M is the maze
+	// M is the maze	
 	function solve(W, H, M) {
-		let S = []; // stack used for backtracking
+		// stack used for backtracking into previous room with unexplored corridors
+		let S = []; 
 		
+		// call on each room and check each open corridor recursively
 		// x1, y1: current location
 		// x0, y0: previous location
 		var solve_ = function(x0, y0, x1, y1, d) {
 			if (x1 == W - 1 && y1 == H - 1) 
 				return true;
-
-			// 0b0100 == corridor to the east
-			// 0b0001 == corridor to the west
-			// 0b1000 == corridor to the north
-			// 0b0010 == corridor to the south
 			
-			// this loop checks if there is a connection between the current room
-			// and each room that has an edge except for the room that was just
-			// visited
+			// Check each adjacent room 
 			for (let e of [ [0b0100, 0b0001, x1 + 1, y1], [0b0001, 0b0100, x1 - 1, y1], [0b1000, 0b0010, x1, y1 - 1], [0b0010, 0b1000, x1, y1 + 1] ]) {
 
-				// coordinates outside the maze				
+				// Coordinates fall outside the maze				
 				if ( !(0 <= e[2] && e[2] < W && 0 <= e[3] && e[3] < H) ) 
 					continue;
 
-				// no connection
-				// check the binary codes of the maze
+				// There is no corridor between the rooms								
 				if ( !(M[e[3]][e[2]] & e[1]) || !(M[y1][x1] & e[0]) )
 					continue;
 			
-				// avoid moving back the same way
+				// Do not move back the way you came
 				if ( (e[2] == x0 && e[3] == y0) ) 
 					continue;
 
-				// try solving from the new position
+				// Try solve from this new position
 				if (solve_(x1, y1, e[2], e[3])) {
 					S.push([e[2], e[3]]);
 					return true;
@@ -66,11 +68,12 @@ import { choice, shuffle } from './util.js';
 			return false;
 		}
 
+		// start in the upper left corner
 		solve_(-1, -1, 0, 0);
 		return S;
 	}
  
-	// draws a maze using unicode symbols into the div named by 'i'
+	// Draws a maze using unicode symbols into the div named by 'i'
 	// 'f' is the function that creates the maze
 	function drawmaze(W, H, i, createMaze) {
 		let c = document.querySelector(i).getContext('2d');
@@ -83,12 +86,13 @@ import { choice, shuffle } from './util.js';
 		createMaze(W, H, M);
 
 		// solve maze
+		// return value is a stack of cells that forms the path from start to finish
 		let s = solve(W, H, M);
 
 		c.textBaseline = 'top';
 		c.font         = '16px monospace';
 
-		// draw the maze
+		// mapping of codes to symbol for drawing the maze on screen
 		let arr = new Array(16).fill(0);
 		arr[0b0000] = ' ';
 		arr[0b0001] = '╸';
@@ -126,11 +130,9 @@ import { choice, shuffle } from './util.js';
 		}
 	}
 
-	// kruskals method of maze generation using modified random spanning tree algorithm		
-	function kruskal(W, H, M) {
-		
-		
-		// All possible edges 
+	// kruskals method of maze generation using a modified random spanning tree algorithm		
+	function kruskal(W, H, M) {		
+		// List of all edges/corridors possible in the maze
 		let E = []
 
 		for(let y = 0; y < H; y++) {
@@ -145,9 +147,8 @@ import { choice, shuffle } from './util.js';
 			}
 		}
 
-		// each index represents a grid cell in the maze
-		// S[4] = 3 means 3 is connected to 4 and 4 is the parent
-		// used to implement disjoint sets
+		// S is a list that keeps track of which rooms are connected using
+		// the disjointed set/union find algorithm		
 		let S = [];
 
 		for(let y = 0; y < H; y++) {
@@ -157,8 +158,7 @@ import { choice, shuffle } from './util.js';
 			}
 		}
 
-		// implement union-find for using disjoint sets
-		// to check if two parts of the maze share a connection or if an edge must be created 
+		// implement union-find algorithm		
 		function root(x, y) {
 			let t = BigInt(y) * BigInt(W) + BigInt(x);
 			while (S[t] != t) {
@@ -180,7 +180,8 @@ import { choice, shuffle } from './util.js';
 		// shuffle all edges
 		shuffle(E);
 
-		// create an edge if the rooms are connected already		
+		// iterate over all edges and create a corridor if the two rooms formed by the
+		// edge if they are not reachable by an existing path		
 		for (let e of E) {
 			if (union(e.x0, e.y0, e.x1, e.y1)) {
 				if (e.x0 == e.x1) {
@@ -194,8 +195,11 @@ import { choice, shuffle } from './util.js';
 		}
 	}
 
+	
 	function backtrack(W, H, M) {
-		// backtracking method; pick an unvisited cell at random
+		// backtracking method of maze generation
+		// start with some cell; create an edge with another room that has not been visited
+		// mark this room as the current room and repeat this process from the new room
 		
 		// starting point
 		let x = 0, y = 0; 
@@ -205,8 +209,8 @@ import { choice, shuffle } from './util.js';
 		while (true) {
 			let L = []; // L is a list of possible edges to visit
 
-			// added new rooms to visit to L unless not inside bounds of maze
-			// or if already visited			
+			// From the current room check which of the surrounding rooms have not be
+			// visited yet. Add them to L.			
 			if ((x < W - 1) && M[y][x + 1] === 0) 
 				L.push([x + 1, y, 4, 1]);
 
@@ -219,14 +223,17 @@ import { choice, shuffle } from './util.js';
 			if ((y > 0) && M[y - 1][x] === 0) 
 				L.push([x, y - 1, 8, 2]);
 
-			// find rooms for creating edges with
 			if (L.length) {
-				// shuffle L randomizing the maze
+				// select an unvisited room at random
 				let i = choice(L);
 				let [x0, y0, v, v0] = i;
-				M[y ][x ] |= v;  // create edge in maze
+								
+				// create an edge
+				M[y ][x ] |= v; 
 				M[y0][x0] |= v0;  
+				
 				cells.push([x, y]);
+				
 				x = x0;
 				y = y0;
 				continue;
@@ -241,14 +248,15 @@ import { choice, shuffle } from './util.js';
 		}
 	}
 
-	function recdiv(W, H, M) {
-		// recursive division method
+	function recdiv(W, H, M) {		
+		// recursively divide the maze into two rooms connected by a single edge
+		// recursively repeat this process on each resulting room
 		
 		// initialize the array with closed rooms with no edges
 		for(let y = 0; y < H; y++) 
 			M.push(new Array(W).fill(0));
 
-		// init border around the maze
+		// create a border around the maze 
 		for (let y = 0; y < H; y++) {
 			for (let x = 0; x < W; x++) {
 				let v = 0b1111;
@@ -260,7 +268,7 @@ import { choice, shuffle } from './util.js';
 			}
 		}
 
-		// keep dividing rooms until to small to divide
+		// keep dividing rooms and stop when the rooms are too small		
 		function recdiv(w0, w1, h0, h1) {
 			let W = w1 - w0;
 			let H = h1 - h0;
@@ -307,7 +315,7 @@ import { choice, shuffle } from './util.js';
 			}
 		}
 
-		// first call
+		// first call; start with the entire maze 
 		recdiv(0, W - 1, 0, H - 1);
 	};
 
@@ -315,6 +323,7 @@ import { choice, shuffle } from './util.js';
 	let W = 50; 
 	let H = 30;
 
+	// solve and draw each maze
 	drawmaze(W, H, '#kruskal_canvas', kruskal);
 	drawmaze(W, H, '#division_canvas', recdiv);
 	drawmaze(W, H, '#backtracking_canvas', backtrack);

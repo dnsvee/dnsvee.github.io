@@ -1,10 +1,7 @@
-// implements maze algorithms and a recursive backtracking algorithm that solves it
+// implements maze algorithms and a recursive backtracking solver
 import { choice, shuffle } from './util.js';
 
-(function() {
-	// implements some maze algorithms and a recursive backtracker for solving them
-	
-	
+(function() {		
 	function randomInt(max, min=0) {
 		return Math.floor(Math.random() * (max - min)) + min;
 	}
@@ -20,14 +17,17 @@ import { choice, shuffle } from './util.js';
 			let j = Math.floor(Math.random() * (i + 1));
 			let x = a[i];
 			a[i] = a[j];
-
 			a[j] = x;
 		}
 	}
 
-	// solves a maze using backtracking and recursion
+	// solvers using backtracking (dfs)	
+	// W is width
+	// H is height
+	// M is the maze
 	function solve(W, H, M) {
-		let S = [];
+		let S = []; // stack used for backtracking
+		
 		// x1, y1: current location
 		// x0, y0: previous location
 		var solve_ = function(x0, y0, x1, y1, d) {
@@ -70,19 +70,17 @@ import { choice, shuffle } from './util.js';
 		return S;
 	}
  
-	// draw a maze using unicode symbols into the div named by 'i'
-	// 'i' is the id of the canvas to draw unto
-	// 'f' is the function that creats the maze
-	function drawmaze(W, H, i, f) {
+	// draws a maze using unicode symbols into the div named by 'i'
+	// 'f' is the function that creates the maze
+	function drawmaze(W, H, i, createMaze) {
 		let c = document.querySelector(i).getContext('2d');
 		let M = [];
 		
-		for(let y = 0; y < H; y++) {
+		for(let y = 0; y < H; y++) 
 			M.push(new Array(W).fill(0));
-		}
-
+				
 		// create maze
-		f(W, H, M);
+		createMaze(W, H, M);
 
 		// solve maze
 		let s = solve(W, H, M);
@@ -128,8 +126,9 @@ import { choice, shuffle } from './util.js';
 		}
 	}
 
+	// kruskals method of maze generation using modified random spanning tree algorithm		
 	function kruskal(W, H, M) {
-		// kruskals method of maze generation using modified random spanning tree algorithm		
+		
 		
 		// All possible edges 
 		let E = []
