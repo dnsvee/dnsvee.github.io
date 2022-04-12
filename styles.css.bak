@@ -50,10 +50,9 @@ pre {
 	font-size: 14px;
 }
 
-.note {
-	border-radius:    4px;
-	border:           2px solid red;
-	background-color: yellow;
+.note {	
+	border-bottom:    2px double red;
+	background-color: grey;
 	font-family:      Mono;
 	margin-left:      16px;
 	margin-right:     16px;
