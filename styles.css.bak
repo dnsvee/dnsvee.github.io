@@ -30,7 +30,11 @@ h2 {
 	border-bottom: 2px solid black;
 }
 
-
+span.key { 
+	border: 2px solid yellow;
+	border-radius: 5px;
+}
+	
 
 .left {
 	border-left: 4px solid blue;
