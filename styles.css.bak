@@ -51,7 +51,7 @@ pre {
 }
 
 .note {	
-	border-bottom:    2px double red;
+	border-bottom:    2px double linen;
 	background-color: grey;
 	font-family:      Mono;
 	margin-left:      16px;
