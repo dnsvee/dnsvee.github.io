@@ -12,19 +12,30 @@
 		<p><a href='https://leetcode.com/'>LeetCode</a> is a website where you can solve programming problems. After writing a solution to a problem you can submit your solution to be tested against numerous testcases. Here I've collected links to my solutions. Unfortunately you can't directly link to a solution and have it tested. These links are of the dicussion forum posts. Click on description to see the problem statement.</p>
 		
 		<h2>Python</h2>		
-		<h3>Easy</h3>
-		<h3>Medium</h3>
-		<h3>Hard</h3>
+		
+		<p><a href='https://leetcode.com/problems/check-if-binary-string-has-at-most-one-segment-of-ones/discuss/1796907/Python-solution'>1784. Check if Binary String Has at Most One Segment of Ones</a><label class='note'>easy</label><p>
+		
+		
 		<p><a href='https://leetcode.com/problems/divide-two-integers/discuss/1442656/python-solution-using-recursion'>29: Divide Two Numbers (Python)</a><p>
-		<p><a href='https://leetcode.com/problems/longest-valid-parentheses/discuss/1446203/Solution-in-Python-using-stack'>32. Longest Valid Parentheses (Python)</a><p>
-		<p><a href='https://leetcode.com/problems/first-missing-positive/discuss/1429488/Python-solution-with-comments'>41. First Missing Positive (Python)</a><p>
-		<p><a href='https://leetcode.com/problems/check-if-binary-string-has-at-most-one-segment-of-ones/discuss/1796907/Python-solution'>1784. Check if Binary String Has at Most One Segment of Ones</a><p>
-		<p><a href='https://leetcode.com/problems/trapping-rain-water/discuss/1440678/Python-solution-(some-comments)'>42. Trapping Rain Water (Python)</a><p>
-		<p><a href='https://leetcode.com/problems/wildcard-matching/discuss/1438483/Slow-but-it-works-(Python)'>44. Wildcard Matching (Python)</a><p>
-		<p><a href='https://leetcode.com/problems/valid-number/discuss/1440739/Python-solution'>65. Valid Number (Python)</a><p>
-		<p><a href='https://leetcode.com/problems/edit-distance/discuss/1446217/Distance-of-the-Edits-in-JavaScript'>72. Edit Distance (JavaScript)</a><p>
-		<p><a href='https://leetcode.com/problems/making-a-large-island/discuss/1441009/Python-solution'>1827. Making A Large Island (Python)</a><p>
+		
 		<p><a href='https://leetcode.com/problems/group-anagrams/discuss/1439141/Slow-but-steady-in-Python'>49. Group Anagrams (Python)</a><p>
+		
+		
+		<p><a href='https://leetcode.com/problems/longest-valid-parentheses/discuss/1446203/Solution-in-Python-using-stack'>32. Longest Valid Parentheses (Python)</a><p>	
+		
+		<p><a href='https://leetcode.com/problems/first-missing-positive/discuss/1429488/Python-solution-with-comments'>41. First Missing Positive (Python)</a><p>
+		
+		<p><a href='https://leetcode.com/problems/trapping-rain-water/discuss/1440678/Python-solution-(some-comments)'>42. Trapping Rain Water (Python)</a><p>
+		
+		<p><a href='https://leetcode.com/problems/wildcard-matching/discuss/1438483/Slow-but-it-works-(Python)'>44. Wildcard Matching (Python)</a><p>
+		
+		<p><a href='https://leetcode.com/problems/valid-number/discuss/1440739/Python-solution'>65. Valid Number (Python)</a><p>
+		
+		<p><a href='https://leetcode.com/problems/edit-distance/discuss/1446217/Distance-of-the-Edits-in-JavaScript'>72. Edit Distance (JavaScript)</a><p>
+		
+		<p><a href='https://leetcode.com/problems/making-a-large-island/discuss/1441009/Python-solution'>1827. Making A Large Island (Python)</a><p>
+		
+		
 		<p><a href='https://leetcode.com/problems/spiral-matrix/discuss/1446591/Python-Solution'>54. Spiral Matrix(Python)</a><p>
 		<p><a href='https://leetcode.com/problems/search-in-rotated-sorted-array/discuss/1446292/Python-Solution-(pretty-straightforward)'>33. Search in Rotated Sorted Array (Python)</a><p>
 		<p><a href='https://leetcode.com/problems/longest-palindromic-substring/discuss/1441271/Python-solution'>5. Longest Palindromic Substring (Python)</a><p>
