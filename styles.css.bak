@@ -50,8 +50,11 @@ pre {
 	font-size: 14px;
 }
 
-label.note {
+.note {
 	border-radius: 16px;
 	border: 2px solid blue;
 	font-family: Mono;
+	margin-left:  16px;
+	margin-right: 16px;
+	
 }

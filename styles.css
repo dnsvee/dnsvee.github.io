@@ -52,6 +52,10 @@ pre {
 
 .note {
 	border-radius: 16px;
-	border: 2px solid blue;
+	border: 2px solid red;
+	background-color: yellow;
 	font-family: Mono;
+	margin-left:  16px;
+	margin-right: 16px;
+	
 }
