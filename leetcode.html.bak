@@ -69,49 +69,52 @@
 		
 		<p><a href='https://leetcode.com/problems/edit-distance/discuss/1446217/Distance-of-the-Edits-in-JavaScript'>72. Edit Distance (JavaScript)</a><label class='note'>medium</label><label class='note'>dynamic programming</label><p>
 		
-		<p><a href='https://leetcode.com/problems/partition-labels/discuss/1446631/Python-solution'>763. Partition Labels (JavaScript)</a><p>
-		<p><a href='https://leetcode.com/problems/avoid-flood-in-the-city/discuss/1317272/JavaScript-solution'>1488. Avoid Flood in The City (JavaScript)</a><p>
-		<p><a href='https://leetcode.com/problems/letter-combinations-of-a-phone-number/discuss/1446242/JavaScript-solution'>i17. Letter Combinations of a Phone Number (JavaScript)</a><p>
-		<p><a href='https://leetcode.com/problems/valid-sudoku/discuss/1446302/JavaScript-solution-with-sets'>36. Valid Sudoku (JavaScript)<a href=''></a><p>
-		<p><a href='https://leetcode.com/problems/merge-k-sorted-lists/discuss/1446198/Solution-using-JavaScript'>23. Merge k Sorted Lists (JavaScript)</a><p>
-		<p><a href='https://leetcode.com/problems/single-threaded-cpu/discuss/1323377/JavaScript-solution-with-priority-queue'>1834. Single-Threaded CPU (JavaScript)</a><p>
-		<p><a href='https://leetcode.com/problems/minimum-sideway-jumps/discuss/1230337/JS-solution'>1824. Minimum Sideway Jumps (JavaScript)</a><p>
-		<p><a href='https://leetcode.com/problems/multiply-strings/discuss/1446314/JavaScript-(old-school-method)'>43. Multiply Stringsi (JavaScript)</a><p>
-		<p><a href='https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/discuss/1446298/JavaScript-solution'>34. Find First and Last Position of Element in Sorted Array (JavaScript)</a><p>
-		<p><a href='https://leetcode.com/problems/all-paths-from-source-to-target/discuss/1446646/JavaScript-solution'>797. All Paths From Source to Target JavaScript)</a><p>
-		<p><a href='https://leetcode.com/problems/swap-nodes-in-pairs/discuss/1446256/JavaScript-solution'>24. Swap Nodes in Pairs (JavaScript)</a><p>
-		<h2>Java</h2>
-		<p><a href='https://leetcode.com/problems/combinations/discuss/1568906/Java-Solution'>77. Combinations (Java)</a><p>
-		<p><a href='https://leetcode.com/problems/subsets/discuss/1572198/Java-and-recursion'>78. Subsets (Java)</a><p>
-		<p><a href='https://leetcode.com/problems/path-with-maximum-probability/discuss/1720831/Java-Sol-with-Dijkstra-and-Heap'>1514. Path with Maximum Probability</a><p>
-		<p><a href='https://leetcode.com/problems/unique-paths/discuss/1755357/Java-Solution'>62. Unique Paths</a><p>
-		<p><a href='https://leetcode.com/problems/sort-an-array/discuss/1796083/Heap-sort-in-Java.'>912. Sort an Array</a><p>
-		<p><a href='https://leetcode.com/problems/majority-element/discuss/1795937/Java-solution-just-as-concise-as-Python'>169. Majority Element</a><p>
-		<p><a href='https://leetcode.com/problems/simplify-path/discuss/1796647/Java-Solution'>71. Simplify Path</a><p>
-		<p><a href='https://leetcode.com/problems/remove-duplicates-from-sorted-list/discuss/1796651/Java-Solution'>83. Remove Duplicates from Sorted List</a><p>
-		<p><a href='https://leetcode.com/problems/binary-tree-inorder-traversal/discuss/1796661/Java-Solution'>94. Binary Tree Inorder Traversal</a><p>
-		<p><a href='https://leetcode.com/problems/same-tree/discuss/1796670/Java-Solution'>100. Same Tree</a><p>
-		<p><a href='https://leetcode.com/problems/richest-customer-wealth/discuss/1781212/Java-using-Stream-API-(slow)'>1672. Richest Customer Wealth</a><p>
-		<p><a href='https://leetcode.com/problems/n-queens/discuss/1798870/Java-Solution'>51. N-Queens</a><p>
-				<p><a href='https://leetcode.com/problems/ugly-number/discuss/1798987/Java-Solution'>263. Ugly Number</a><p>
-		<p><a href='https://leetcode.com/problems/power-of-four/discuss/1809971/Java-Solution-using-Math.log'>342. Power of Four</a><p>
-		<p><a href='https://leetcode.com/problems/reverse-bits/discuss/1815612/Java-Solution-using-bit-arithmetic'>190. Reverse Bits</a><p>
-		<p><a href='https://leetcode.com/problems/min-stack/discuss/1816162/Java-Solution-using-two-stacks'>155. Min Stack</a><p>
-		<p><a href='https://leetcode.com/problems/isomorphic-strings/discuss/1817068/Java-Solution'>205. Isomorphic Strings</a><p>
+		<p><a href='https://leetcode.com/problems/partition-labels/discuss/1446631/Python-solution'>763. Partition Labels (JavaScript)</a><label class='note'>medium</label><p>
+		<p><a href='https://leetcode.com/problems/avoid-flood-in-the-city/discuss/1317272/JavaScript-solution'>1488. Avoid Flood in The City (JavaScript)</a><label class='note'>medium</label><p>
+		<p><a href='https://leetcode.com/problems/letter-combinations-of-a-phone-number/discuss/1446242/JavaScript-solution'>i17. Letter Combinations of a Phone Number (JavaScript)</a><label class='note'>medium</label><p>
+		<p><a href='https://leetcode.com/problems/valid-sudoku/discuss/1446302/JavaScript-solution-with-sets'>36. Valid Sudoku (JavaScript)<a href=''><label class='note'>medium</label></a><p>
+		<p><a href='https://leetcode.com/problems/merge-k-sorted-lists/discuss/1446198/Solution-using-JavaScript'>23. Merge k Sorted Lists (JavaScript)</a><label class='note'>hard</label><p>
+		<p><a href='https://leetcode.com/problems/single-threaded-cpu/discuss/1323377/JavaScript-solution-with-priority-queue'>1834. Single-Threaded CPU (JavaScript)</a><label class='note'>medium</label><p>
+		<p><a href='https://leetcode.com/problems/minimum-sideway-jumps/discuss/1230337/JS-solution'>1824. Minimum Sideway Jumps (JavaScript)</a><label class='note'>medium</label><p>
+		<p><a href='https://leetcode.com/problems/multiply-strings/discuss/1446314/JavaScript-(old-school-method)'>43. Multiply Strings (JavaScript)</a><label class='note'>medium</label><p>
+		<p><a href='https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/discuss/1446298/JavaScript-solution'>34. Find First and Last Position of Element in Sorted Array (JavaScript)</a><label class='note'>medium</label><p>
+		<p><a href='https://leetcode.com/problems/all-paths-from-source-to-target/discuss/1446646/JavaScript-solution'>797. All Paths From Source to Target (JavaScript)</a><label class='note'>medium</label><label class='note'>graph</label><p>
 		
-		<p><a href='https://leetcode.com/problems/implement-trie-prefix-tree/discuss/1831018/Muh-trie-in-Java'>208. Implement Trie (Prefix Tree)</a><p>
-		<p><a href='https://leetcode.com/problems/implement-trie-prefix-tree/discuss/1831018/Muh-trie-in-Java'>208. Implement Trie (Prefix Tree)</a><p>
-		<p><a href='https://leetcode.com/problems/champagne-tower/discuss/1825361/Java-Solution'>799. Champagne Tower</a><p>
-		<p><a href='https://leetcode.com/problems/powx-n/discuss/1846332/Java-Solution'>50. Pow(x, n)</a><p>
-		<p><a href='https://leetcode.com/problems/where-will-the-ball-fall/discuss/1847028/Help-my-balls-are-falling-(Java)'>1706. Where Will the Ball Fall</a><p>
-		<p><a href='https://leetcode.com/problems/rings-and-rods/discuss/1854689/Java-Solution'>2103. Rings and Rods</a><p>
-		<p><a href='https://leetcode.com/problems/product-of-array-except-self/discuss/1854932/Java-Solution'>238. Product of Array Except Self</a><p>
+		<p><a href='https://leetcode.com/problems/swap-nodes-in-pairs/discuss/1446256/JavaScript-solution'>24. Swap Nodes in Pairs (JavaScript)</a><label class='note'>medium</label><label class='note'>list</label><p>
+		
+		<h2>Java</h2>
+		
+		<p><a href='https://leetcode.com/problems/combinations/discuss/1568906/Java-Solution'>77. Combinations (Java)</a><label class='note'>medium</label><label class='note'>combinations</label><p>
+		<p><a href='https://leetcode.com/problems/subsets/discuss/1572198/Java-and-recursion'>78. Subsets (Java)</a><label class='note'>medium</label><label class='note'>powerset</label><p>
+		<p><a href='https://leetcode.com/problems/path-with-maximum-probability/discuss/1720831/Java-Sol-with-Dijkstra-and-Heap'>1514. Path with Maximum Probability</a><label class='note'>medium</label><label class='note'>dijkstra</label><p>
+		<p><a href='https://leetcode.com/problems/unique-paths/discuss/1755357/Java-Solution'>62. Unique Paths</a><label class='note'>mediun</label><label class='note'>dijkstra</label><p>
+		<p><a href='https://leetcode.com/problems/sort-an-array/discuss/1796083/Heap-sort-in-Java.'>912. Sort an Array</a><label class='note'>medium</label><label class='note'>dijkstra</label><p>
+		<p><a href='https://leetcode.com/problems/majority-element/discuss/1795937/Java-solution-just-as-concise-as-Python'>169. Majority Element</a><label class='note'>easy</label><label class='note'>streams</label><p>
+		<p><a href='https://leetcode.com/problems/simplify-path/discuss/1796647/Java-Solution'>71. Simplify Path</a><label class='note'>medium</label><p>
+		<p><a href='https://leetcode.com/problems/remove-duplicates-from-sorted-list/discuss/1796651/Java-Solution'>83. Remove Duplicates from Sorted List</a><label class='note'>easy</label><p>
+		<p><a href='https://leetcode.com/problems/binary-tree-inorder-traversal/discuss/1796661/Java-Solution'>94. Binary Tree Inorder Traversal</a><label class='note'>easy</label><label class='note'>tree</label><p>
+		<p><a href='https://leetcode.com/problems/same-tree/discuss/1796670/Java-Solution'>100. Same Tree</a><label class='note'>easy</label><label class='note'>tree</label><p>
+		<p><a href='https://leetcode.com/problems/richest-customer-wealth/discuss/1781212/Java-using-Stream-API-(slow)'>1672. Richest Customer Wealth</a><label class='note'>easy</label><label class='note'>stream</label><p>
+		
+		<p><a href='https://leetcode.com/problems/n-queens/discuss/1798870/Java-Solution'>51. N-Queens</a><label class='note'>hard</label><label class='note'>backtracking</label><p>
+		
+		<p><a href='https://leetcode.com/problems/ugly-number/discuss/1798987/Java-Solution'>263. Ugly Number</a><label class='note'>easy</label><p>
+		<p><a href='https://leetcode.com/problems/power-of-four/discuss/1809971/Java-Solution-using-Math.log'>342. Power of Four</a><label class='note'>easy</label><p>
+		<p><a href='https://leetcode.com/problems/reverse-bits/discuss/1815612/Java-Solution-using-bit-arithmetic'>190. Reverse Bits</a><label class='note'>easy</label><label class='note'>bit arithmetic</label><p>
+		<p><a href='https://leetcode.com/problems/min-stack/discuss/1816162/Java-Solution-using-two-stacks'>155. Min Stack</a><label class='note'>easy</label><label class='note'>stacks</label><p>
+		<p><a href='https://leetcode.com/problems/isomorphic-strings/discuss/1817068/Java-Solution'>205. Isomorphic Strings</a><label class='note'>easy</label><p>
+		
+		<p><a href='https://leetcode.com/problems/implement-trie-prefix-tree/discuss/1831018/Muh-trie-in-Java'>208. Implement Trie (Prefix Tree)</a><label class='note'>medium</label><label class='note'>trie</label><p>
+		
+		<p><a href='https://leetcode.com/problems/champagne-tower/discuss/1825361/Java-Solution'>799. Champagne Tower</a><label class='note'>medium</label><p>
+		
+		<p><a href='https://leetcode.com/problems/powx-n/discuss/1846332/Java-Solution'>50. Pow(x, n)</a><label class='note'>medium</label><p>
+		
+		<p><a href='https://leetcode.com/problems/where-will-the-ball-fall/discuss/1847028/Help-my-balls-are-falling-(Java)'>1706. Where Will the Ball Fall</a><label class='note'>medium</label><p>
+		<p><a href='https://leetcode.com/problems/rings-and-rods/discuss/1854689/Java-Solution'>2103. Rings and Rods</a><label class='note'>easy</label><p>
+		<p><a href='https://leetcode.com/problems/product-of-array-except-self/discuss/1854932/Java-Solution'>238. Product of Array Except Self</a><label class='note'>medium</label><p>
 		<p><a href=''></a><p>
 			
-		<p><a href=''></a><p>
-		<p><a href=''></a><p>
-		<p><a href=''></a><p>
-		<p><a href=''></a><p>
 		<h2>C++</h2>
 		<p><a href='https://leetcode.com/problems/sudoku-solver/discuss/1597735/C%2B%2B-solution'>37. Sudoku Solver (C++)</a><p>
 		
