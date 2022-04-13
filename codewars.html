@@ -11,7 +11,7 @@
 				border: double;
 			}				
 			
-			.problem p:nth-child(1) {
+			.problem .title {
 				background-color: #b2beb5;				
 				margin-top: 0px;
 				margin-bottom: 0px;
@@ -22,7 +22,7 @@
 				border-bottom-style: dashed;
 			}
 			
-			.problem p:nth-child(2) {
+			.problem .description {
 			background-color: #e2e5de;	
 			margin-top: 0px;
 				margin-bottom: 0px;
@@ -32,7 +32,7 @@
 				border-bottom-style: dashed;
 			}
 			
-			.problem p:nth-child(3) {
+			.problem .code {
 			background-color: #f5f5f5;
 			margin-top: 0px;
 				margin-bottom: 0px;
@@ -50,8 +50,8 @@
 		<p><a href='https://codewars.com/'>CodeWars</a> is a website featuring programming challenges. Once a solutions has been submitted it is checked for correctness by running automated tests. Here are some of my solutions to a subset of problems I solved. Unfortunately you can't directly link to a solution and have it tested. I will present the source and link to the problem.</p>
 				
 		<div class='problem'>
-		<p><a href='https://www.codewars.com/kata/58e24788e24ddee28e000053/java'>Simple assembler interpreter</a></p>
-		<p>This is the first part of this kata series. Second part is here.
+		<p class='title'><a href='https://www.codewars.com/kata/58e24788e24ddee28e000053/java'>Simple assembler interpreter</a></p>
+		<p class='description'>This is the first part of this kata series. Second part is here.
 
 We want to create a simple interpreter of assembler which will support the following instructions:
 
@@ -66,7 +66,7 @@ Note: the jnz instruction moves relative to itself. For example, an offset of -1
 The function will take an input list with the sequence of the program instructions and will execute them. The program ends when there are no more instructions to execute, then it returns a dictionary with the contents of the registers.
 
 Also, every inc/dec/jnz on a register will always be preceeded by a mov on the register first, so you don't need to worry about uninitialized registers.</p>
-		<pre><code>
+		<pre class='code'><code>
 import java.util.*;
 import java.io.*;
 
@@ -119,8 +119,8 @@ public class SimpleAssembler {
 		
 		<hr/>
 		<div class='problem'>
-		<p><a href='https://www.codewars.com/kata/57680d0128ed87c94f000bfd'>Boggle Word Checker</a></p>
-		<pre>Write a function that determines whether a string is a valid guess in a Boggle board, as per the rules of Boggle. A Boggle board is a 2D array of individual characters, e.g.:
+		<p class='title'><a href='https://www.codewars.com/kata/57680d0128ed87c94f000bfd'>Boggle Word Checker</a></p>
+		<pre class='description'>Write a function that determines whether a string is a valid guess in a Boggle board, as per the rules of Boggle. A Boggle board is a 2D array of individual characters, e.g.:
 
 [ ['I','L','A','W'],
   ['B','N','G','E'],
@@ -134,7 +134,7 @@ Your function should take two arguments (a 2D array and a string) and return tru
 
 Test cases will provide various array and string sizes (squared arrays up to 150x150 and strings up to 150 uppercase letters). You do not have to check whether the string is a real word or not, only if it's a valid guess.
 </pre>
-<pre><code>
+<pre class='code'><code>
 public class Boggle {
     
     String   W;
@@ -195,8 +195,8 @@ public class Boggle {
 
 
 <div class='problem'>
-<p><a href='https://www.codewars.com/kata/55e2de13b668981d3300003d'>Derivatives of type x^n</a></p>
-<pre>You are provided with a function of the form f(x) = axⁿ, that consists of a single term only and 'a' and 'n' are integers, e.g f(x) = 3x², f(x) = 5 etc.
+<p class='title'><a href='https://www.codewars.com/kata/55e2de13b668981d3300003d'>Derivatives of type x^n</a></p>
+<pre class='description'>You are provided with a function of the form f(x) = axⁿ, that consists of a single term only and 'a' and 'n' are integers, e.g f(x) = 3x², f(x) = 5 etc.
 
 Your task is to create a function that takes f(x) as the argument and returns the result of differentiating the function, that is, the derivative.
 
@@ -219,7 +219,7 @@ Examples
 "-x"    => "-1"
 "42"    => "0"
 </pre>
-<pre><code>
+<pre class='code'><code>
 package com.codewars.huzeifa;
 
 import java.util.regex.*;
