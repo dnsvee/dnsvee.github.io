@@ -47,10 +47,10 @@
 	<body>
 		<a id='back' href='/index.html'>Back</a>
 		<h1>Solutions to problems from CodeWars</h3>
-		<p><a href='https://codewars.com/'>CodeWars</a> is another website featuring programming challenges where you can. Solutions are checked by running multiple test cases. Here are some of my solutions to a subset of problems I solved. Unfortunately you can't directly link to a solution and have it tested. I will present the source and link to the problem.</p>
+		<p><a href='https://codewars.com/'>CodeWars</a> is a website featuring programming challenges. Once a solutions has been submitted it is checked for correctness by running automated tests. Here are some of my solutions to a subset of problems I solved. Unfortunately you can't directly link to a solution and have it tested. I will present the source and link to the problem.</p>
 				
 		<div class='problem'>
-		<p><a href='https://www.codewars.com/kata/58e24788e24ddee28e000053/java'>Simple assembler interpreter</a>
+		<p><a href='https://www.codewars.com/kata/58e24788e24ddee28e000053/java'>Simple assembler interpreter</a></p>
 		<p>This is the first part of this kata series. Second part is here.
 
 We want to create a simple interpreter of assembler which will support the following instructions:
