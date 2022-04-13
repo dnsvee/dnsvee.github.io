@@ -116,9 +116,9 @@
 		<p><a href=''></a><p>
 			
 		<h2>C++</h2>
-		<p><a href='https://leetcode.com/problems/sudoku-solver/discuss/1597735/C%2B%2B-solution'>37. Sudoku Solver (C++)</a><p>
+		<p><a href='https://leetcode.com/problems/sudoku-solver/discuss/1597735/C%2B%2B-solution'>37. Sudoku Solver (C++)</a><label class='note'>hard</label><p>
 		
-		<p><a href='https://leetcode.com/problems/implement-trie-prefix-tree/discuss/1833904/C%2B%2B-Trie'>208. Implement Trie (Prefix Tree)</a><p>
+		<p><a href='https://leetcode.com/problems/implement-trie-prefix-tree/discuss/1833904/C%2B%2B-Trie'>208. Implement Trie (Prefix Tree)</a><label class='note'>medium</label><p>
 		<p><a href=''></a><p>
 		<p><a href=''></a><p>
 	</body>
