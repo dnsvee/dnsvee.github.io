@@ -1,0 +1,161 @@
+2022-06-11 10:36:29.149 19503-19503/com.grewon.testlio D/ColorViewRootUtil: nav bar mode ignore false downX 535 downY 539 mScreenHeight 1600 mScreenWidth 720 mStatusBarHeight 36 globalScale 1.125 nav mode 0 rotation 0 event MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=535.0, y[0]=539.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x2, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=94464323, downTime=94464323, deviceId=3, source=0x1002, displayId=0 }
+2022-06-11 10:36:29.248 19503-19503/com.grewon.testlio I/Choreographer: Skipped 1 frames!  The application may be doing too much work on its main thread.
+2022-06-11 10:36:29.277 19503-19503/com.grewon.testlio W/ActivityThread: handleWindowVisibility: no activity for token android.os.BinderProxy@311f3d2
+2022-06-11 10:36:29.280 19503-20375/com.grewon.testlio D/libMEOW: applied 1 plugins for [com.grewon.testlio]:
+2022-06-11 10:36:29.280 19503-20375/com.grewon.testlio D/libMEOW:   plugin 1: [libMEOW_gift.so]:
+2022-06-11 10:36:29.481 19503-20257/com.grewon.testlio E/LogX: X-Auth-Token -> eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU3NTI0MzQ2LCJqdGkiOiJhNGJlMTg0OTcwMWY0MWYzYWYxYWM3ZTZlN2ViMjBlYyIsInVzZXJfaWQiOjEwODg0fQ.kM4y4ZfUxCt4WLBV45GATyF39UeeS1ZQyysPamdcS8k
+2022-06-11 10:36:29.482 19503-20257/com.grewon.testlio I/okhttp.OkHttpClient: --> GET https://vettingapp.testl.io/api/v1/division/?grade=4739
+2022-06-11 10:36:29.482 19503-20257/com.grewon.testlio I/okhttp.OkHttpClient: Content-Type: application/json
+2022-06-11 10:36:29.482 19503-20257/com.grewon.testlio I/okhttp.OkHttpClient: Cache-Control: no-cache
+2022-06-11 10:36:29.482 19503-20257/com.grewon.testlio I/okhttp.OkHttpClient: Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU3NTI0MzQ2LCJqdGkiOiJhNGJlMTg0OTcwMWY0MWYzYWYxYWM3ZTZlN2ViMjBlYyIsInVzZXJfaWQiOjEwODg0fQ.kM4y4ZfUxCt4WLBV45GATyF39UeeS1ZQyysPamdcS8k
+2022-06-11 10:36:29.482 19503-20257/com.grewon.testlio I/okhttp.OkHttpClient: --> END GET
+2022-06-11 10:36:29.491 19503-20257/com.grewon.testlio W/System: ClassLoader referenced unknown path: system/framework/mediatek-cta.jar
+2022-06-11 10:36:29.493 19503-19503/com.grewon.testlio V/PhoneWindow: DecorView setVisiblity: visibility = 4, Parent = null, this = DecorView@37c01dd[]
+2022-06-11 10:36:29.496 19503-19503/com.grewon.testlio D/ColorViewRootUtil: initSwipState, isDisplayCompatApp false
+2022-06-11 10:36:29.497 19503-19503/com.grewon.testlio D/ColorViewRootUtil: updateScreenSize, mScreenHeight 1600,mScreenWidth:720,height:1600,width:720
+2022-06-11 10:36:29.501 19503-19503/com.grewon.testlio D/WindowManager: Add to mViews: DecorView@37c01dd[ClassesDivisionsActivity], this = android.view.WindowManagerGlobal@6c9e7eb,pkg= com.grewon.testlio
+2022-06-11 10:36:29.508 19503-19503/com.grewon.testlio D/ViewRootImpl[ClassesDivisionsActivity]: hardware acceleration = true , fakeHwAccelerated = false, sRendererDisabled = false, forceHwAccelerated = false, sSystemRendererDisabled = false
+2022-06-11 10:36:29.517 19503-19503/com.grewon.testlio I/InputTransport: Create ARC handle: 0x7c6b30cb00
+2022-06-11 10:36:29.518 19503-19503/com.grewon.testlio V/PhoneWindow: DecorView setVisiblity: visibility = 0, Parent = android.view.ViewRootImpl@dba309e, this = DecorView@37c01dd[ClassesDivisionsActivity]
+2022-06-11 10:36:29.521 19503-19503/com.grewon.testlio I/Choreographer: Skipped 15 frames!  The application may be doing too much work on its main thread.
+2022-06-11 10:36:29.554 19503-19571/com.grewon.testlio D/Surface: Surface::connect(this=0x7c11b87000,api=1)
+2022-06-11 10:36:29.557 19503-19571/com.grewon.testlio D/Surface: Surface::setBufferCount(this=0x7c11b87000,bufferCount=3)
+2022-06-11 10:36:29.557 19503-19571/com.grewon.testlio D/Surface: Surface::allocateBuffers(this=0x7c11b87000)
+2022-06-11 10:36:29.608 19503-19503/com.grewon.testlio I/Choreographer: Skipped 4 frames!  The application may be doing too much work on its main thread.
+2022-06-11 10:36:29.639 19503-19503/com.grewon.testlio D/ColorViewRootUtil: initSwipState, isDisplayCompatApp false
+2022-06-11 10:36:29.641 19503-19503/com.grewon.testlio D/ColorViewRootUtil: updateScreenSize, mScreenHeight 1600,mScreenWidth:720,height:1600,width:720
+2022-06-11 10:36:29.919 19503-19571/com.grewon.testlio D/Surface: Surface::disconnect(this=0x7c6b3ac000,api=1)
+2022-06-11 10:36:29.993 19503-19503/com.grewon.testlio V/PhoneWindow: DecorView setVisiblity: visibility = 4, Parent = android.view.ViewRootImpl@15d20db, this = DecorView@244dc48[MainActivity]
+2022-06-11 10:36:29.994 19503-19503/com.grewon.testlio I/Choreographer: Skipped 1 frames!  The application may be doing too much work on its main thread.
+2022-06-11 10:36:30.020 19503-19503/com.grewon.testlio I/Choreographer: Skipped 1 frames!  The application may be doing too much work on its main thread.
+2022-06-11 10:36:30.037 19503-19516/com.grewon.testlio I/.grewon.testli: Background concurrent copying GC freed 22899(1081KB) AllocSpace objects, 6(248KB) LOS objects, 66% free, 6059KB/17MB, paused 236us total 102.011ms
+2022-06-11 10:36:30.089 19503-20257/com.grewon.testlio I/okhttp.OkHttpClient: <-- 200 OK https://vettingapp.testl.io/api/v1/division/?grade=4739 (605ms)
+2022-06-11 10:36:30.089 19503-20257/com.grewon.testlio I/okhttp.OkHttpClient: Date: Sat, 11 Jun 2022 08:36:28 GMT
+2022-06-11 10:36:30.090 19503-20257/com.grewon.testlio I/okhttp.OkHttpClient: Server: Apache/2.4.41 (Ubuntu)
+2022-06-11 10:36:30.090 19503-20257/com.grewon.testlio I/okhttp.OkHttpClient: Content-Length: 52
+2022-06-11 10:36:30.090 19503-20257/com.grewon.testlio I/okhttp.OkHttpClient: Allow: GET, POST, HEAD, OPTIONS
+2022-06-11 10:36:30.090 19503-20257/com.grewon.testlio I/okhttp.OkHttpClient: X-Frame-Options: DENY
+2022-06-11 10:36:30.090 19503-20257/com.grewon.testlio I/okhttp.OkHttpClient: X-Content-Type-Options: nosniff
+2022-06-11 10:36:30.090 19503-20257/com.grewon.testlio I/okhttp.OkHttpClient: Referrer-Policy: same-origin
+2022-06-11 10:36:30.090 19503-20257/com.grewon.testlio I/okhttp.OkHttpClient: Keep-Alive: timeout=5, max=100
+2022-06-11 10:36:30.090 19503-20257/com.grewon.testlio I/okhttp.OkHttpClient: Connection: Keep-Alive
+2022-06-11 10:36:30.090 19503-20257/com.grewon.testlio I/okhttp.OkHttpClient: Content-Type: application/json
+2022-06-11 10:36:30.093 19503-20257/com.grewon.testlio I/okhttp.OkHttpClient: {"count":0,"next":null,"previous":null,"results":[]}
+2022-06-11 10:36:30.093 19503-20257/com.grewon.testlio I/okhttp.OkHttpClient: <-- END HTTP (52-byte body)
+2022-06-11 10:36:31.298 19503-19503/com.grewon.testlio D/ColorViewRootUtil: nav bar mode ignore false downX 645 downY 1429 mScreenHeight 1600 mScreenWidth 720 mStatusBarHeight 36 globalScale 1.125 nav mode 0 rotation 0 event MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=645.0, y[0]=1429.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x2, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=94466474, downTime=94466474, deviceId=3, source=0x1002, displayId=0 }
+2022-06-11 10:36:31.570 19503-19503/com.grewon.testlio I/AppCompatDelegate: The Activity's LayoutInflater already has a Factory installed so we can not install AppCompat's
+2022-06-11 10:36:31.574 19503-19503/com.grewon.testlio D/ColorViewRootUtil: initSwipState, isDisplayCompatApp false
+2022-06-11 10:36:31.576 19503-19503/com.grewon.testlio D/ColorViewRootUtil: updateScreenSize, mScreenHeight 1600,mScreenWidth:720,height:1600,width:720
+2022-06-11 10:36:31.578 19503-19503/com.grewon.testlio D/WindowManager: Add to mViews: DecorView@daabcf8[ClassesDivisionsActivity], this = android.view.WindowManagerGlobal@6c9e7eb,pkg= com.grewon.testlio
+2022-06-11 10:36:31.583 19503-19503/com.grewon.testlio D/ViewRootImpl[ClassesDivisionsActivity]: hardware acceleration = true , fakeHwAccelerated = false, sRendererDisabled = false, forceHwAccelerated = false, sSystemRendererDisabled = false
+2022-06-11 10:36:31.593 19503-19503/com.grewon.testlio I/InputTransport: Create ARC handle: 0x7c6b3a1620
+2022-06-11 10:36:31.593 19503-19503/com.grewon.testlio I/Choreographer: Skipped 10 frames!  The application may be doing too much work on its main thread.
+2022-06-11 10:36:31.646 19503-19571/com.grewon.testlio D/Surface: Surface::connect(this=0x7c11793000,api=1)
+2022-06-11 10:36:31.648 19503-19571/com.grewon.testlio D/Surface: Surface::setBufferCount(this=0x7c11793000,bufferCount=3)
+2022-06-11 10:36:31.648 19503-19571/com.grewon.testlio D/Surface: Surface::allocateBuffers(this=0x7c11793000)
+2022-06-11 10:36:31.716 19503-19503/com.grewon.testlio I/Choreographer: Skipped 7 frames!  The application may be doing too much work on its main thread.
+2022-06-11 10:36:31.737 19503-19503/com.grewon.testlio D/ColorViewRootUtil: initSwipState, isDisplayCompatApp false
+2022-06-11 10:36:31.738 19503-19503/com.grewon.testlio D/ColorViewRootUtil: updateScreenSize, mScreenHeight 1600,mScreenWidth:720,height:1600,width:720
+2022-06-11 10:36:32.649 19503-19503/com.grewon.testlio D/ColorViewRootUtil: nav bar mode ignore false downX 240 downY 1400 mScreenHeight 1600 mScreenWidth 720 mStatusBarHeight 36 globalScale 1.125 nav mode 0 rotation 0 event MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=240.0, y[0]=1336.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x2, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=94467824, downTime=94467824, deviceId=3, source=0x1002, displayId=0 }
+2022-06-11 10:36:32.798 19503-19503/com.grewon.testlio I/Choreographer: Skipped 2 frames!  The application may be doing too much work on its main thread.
+2022-06-11 10:36:32.828 19503-19503/com.grewon.testlio I/AssistStructure: Flattened final assist data: 3512 bytes, containing 2 windows, 24 views
+2022-06-11 10:36:32.833 19503-19503/com.grewon.testlio I/Choreographer: Skipped 1 frames!  The application may be doing too much work on its main thread.
+2022-06-11 10:36:32.936 19503-19503/com.grewon.testlio D/ColorViewRootUtil: initSwipState, isDisplayCompatApp false
+2022-06-11 10:36:32.938 19503-19503/com.grewon.testlio D/ColorViewRootUtil: updateScreenSize, mScreenHeight 1600,mScreenWidth:720,height:1600,width:720
+2022-06-11 10:36:32.953 19503-19503/com.grewon.testlio D/ColorViewRootUtil: initSwipState, isDisplayCompatApp false
+2022-06-11 10:36:32.955 19503-19503/com.grewon.testlio D/ColorViewRootUtil: updateScreenSize, mScreenHeight 1600,mScreenWidth:720,height:1600,width:720
+2022-06-11 10:36:33.001 19503-19503/com.grewon.testlio I/Choreographer: Skipped 1 frames!  The application may be doing too much work on its main thread.
+2022-06-11 10:36:37.673 19503-19503/com.grewon.testlio V/ViewRootImpl[ClassesDivisionsActivity]: [ANR Warning]Input routeing takes more than 6000ms since 1970-01-01 01:00:00.000, this = com.mediatek.view.impl.ViewDebugManagerImpl@8989446
+2022-06-11 10:36:37.674 19503-19503/com.grewon.testlio V/ViewRootImpl[ClassesDivisionsActivity]: Input event delivered to android.view.ViewRootImpl$EarlyPostImeInputStage@39f371a at 2022-06-11 10:36:37.645
+2022-06-11 10:36:37.674 19503-19503/com.grewon.testlio V/ViewRootImpl[ClassesDivisionsActivity]: Input event delivered to android.view.ViewRootImpl$NativePostImeInputStage@5b0924b at 2022-06-11 10:36:37.645
+2022-06-11 10:36:37.674 19503-19503/com.grewon.testlio V/ViewRootImpl[ClassesDivisionsActivity]: Input event delivered to android.view.ViewRootImpl$ViewPostImeInputStage@9c35428 at 2022-06-11 10:36:37.646
+2022-06-11 10:36:37.675 19503-19503/com.grewon.testlio V/ViewRootImpl[ClassesDivisionsActivity]: Input event delivered to android.view.ViewRootImpl$SyntheticInputStage@6e9aae6 at 2022-06-11 10:36:37.649
+2022-06-11 10:36:37.688 19503-19503/com.grewon.testlio V/ViewRootImpl[ClassesDivisionsActivity]: [ANR Warning]Input routeing takes more than 6000ms since 1970-01-01 01:00:00.000, this = com.mediatek.view.impl.ViewDebugManagerImpl@8989446
+2022-06-11 10:36:37.688 19503-19503/com.grewon.testlio V/ViewRootImpl[ClassesDivisionsActivity]: Input event delivered to android.view.ViewRootImpl$EarlyPostImeInputStage@39f371a at 2022-06-11 10:36:37.675
+2022-06-11 10:36:37.689 19503-19503/com.grewon.testlio V/ViewRootImpl[ClassesDivisionsActivity]: Input event delivered to android.view.ViewRootImpl$NativePostImeInputStage@5b0924b at 2022-06-11 10:36:37.676
+2022-06-11 10:36:37.689 19503-19503/com.grewon.testlio V/ViewRootImpl[ClassesDivisionsActivity]: Input event delivered to android.view.ViewRootImpl$ViewPostImeInputStage@9c35428 at 2022-06-11 10:36:37.676
+2022-06-11 10:36:37.690 19503-19503/com.grewon.testlio V/ViewRootImpl[ClassesDivisionsActivity]: Input event delivered to android.view.ViewRootImpl$SyntheticInputStage@6e9aae6 at 2022-06-11 10:36:37.685
+2022-06-11 10:36:37.690 19503-19503/com.grewon.testlio I/Choreographer: Skipped 2 frames!  The application may be doing too much work on its main thread.
+2022-06-11 10:36:37.734 19503-19503/com.grewon.testlio D/ColorViewRootUtil: initSwipState, isDisplayCompatApp false
+2022-06-11 10:36:37.735 19503-19503/com.grewon.testlio D/ColorViewRootUtil: updateScreenSize, mScreenHeight 1600,mScreenWidth:720,height:1600,width:720
+2022-06-11 10:36:37.738 19503-19503/com.grewon.testlio D/ColorViewRootUtil: initSwipState, isDisplayCompatApp false
+2022-06-11 10:36:37.739 19503-19503/com.grewon.testlio D/ColorViewRootUtil: updateScreenSize, mScreenHeight 1600,mScreenWidth:720,height:1600,width:720
+2022-06-11 10:36:39.100 19503-19503/com.grewon.testlio D/ColorViewRootUtil: nav bar mode ignore false downX 648 downY 1124 mScreenHeight 1600 mScreenWidth 720 mStatusBarHeight 36 globalScale 1.125 nav mode 0 rotation 0 event MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=648.0, y[0]=1060.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x2, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=94474275, downTime=94474275, deviceId=3, source=0x1002, displayId=0 }
+2022-06-11 10:36:39.263 19503-19503/com.grewon.testlio D/ColorViewRootUtil: initSwipState, isDisplayCompatApp false
+2022-06-11 10:36:39.265 19503-19503/com.grewon.testlio D/ColorViewRootUtil: updateScreenSize, mScreenHeight 1600,mScreenWidth:720,height:1600,width:720
+2022-06-11 10:36:39.267 19503-19503/com.grewon.testlio D/WindowManager: Add to mViews: DecorView@1405fcd[ClassesDivisionsActivity], this = android.view.WindowManagerGlobal@6c9e7eb,pkg= com.grewon.testlio
+2022-06-11 10:36:39.278 19503-19503/com.grewon.testlio D/ViewRootImpl[ClassesDivisionsActivity]: hardware acceleration = true , fakeHwAccelerated = false, sRendererDisabled = false, forceHwAccelerated = false, sSystemRendererDisabled = false
+2022-06-11 10:36:39.288 19503-19503/com.grewon.testlio I/InputTransport: Create ARC handle: 0x7c121277e0
+2022-06-11 10:36:39.294 19503-19503/com.grewon.testlio I/Choreographer: Skipped 3 frames!  The application may be doing too much work on its main thread.
+2022-06-11 10:36:39.297 19503-20257/com.grewon.testlio E/LogX: X-Auth-Token -> eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU3NTI0MzQ2LCJqdGkiOiJhNGJlMTg0OTcwMWY0MWYzYWYxYWM3ZTZlN2ViMjBlYyIsInVzZXJfaWQiOjEwODg0fQ.kM4y4ZfUxCt4WLBV45GATyF39UeeS1ZQyysPamdcS8k
+2022-06-11 10:36:39.297 19503-20257/com.grewon.testlio I/okhttp.OkHttpClient: --> POST https://vettingapp.testl.io/api/v1/division/
+2022-06-11 10:36:39.297 19503-20257/com.grewon.testlio I/okhttp.OkHttpClient: Content-Length: 28
+2022-06-11 10:36:39.297 19503-20257/com.grewon.testlio I/okhttp.OkHttpClient: Content-Type: application/json
+2022-06-11 10:36:39.298 19503-20257/com.grewon.testlio I/okhttp.OkHttpClient: Cache-Control: no-cache
+2022-06-11 10:36:39.298 19503-20257/com.grewon.testlio I/okhttp.OkHttpClient: Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU3NTI0MzQ2LCJqdGkiOiJhNGJlMTg0OTcwMWY0MWYzYWYxYWM3ZTZlN2ViMjBlYyIsInVzZXJfaWQiOjEwODg0fQ.kM4y4ZfUxCt4WLBV45GATyF39UeeS1ZQyysPamdcS8k
+2022-06-11 10:36:39.299 19503-20257/com.grewon.testlio I/okhttp.OkHttpClient: {"grade":4739,"title":"A,B"}
+2022-06-11 10:36:39.299 19503-20257/com.grewon.testlio I/okhttp.OkHttpClient: --> END POST (28-byte body)
+2022-06-11 10:36:39.320 19503-20257/com.grewon.testlio W/System: ClassLoader referenced unknown path: system/framework/mediatek-cta.jar
+2022-06-11 10:36:39.329 19503-19571/com.grewon.testlio D/Surface: Surface::connect(this=0x7c11e7c000,api=1)
+2022-06-11 10:36:39.331 19503-19571/com.grewon.testlio D/Surface: Surface::setBufferCount(this=0x7c11e7c000,bufferCount=3)
+2022-06-11 10:36:39.332 19503-19571/com.grewon.testlio D/Surface: Surface::allocateBuffers(this=0x7c11e7c000)
+2022-06-11 10:36:39.371 19503-19503/com.grewon.testlio I/Choreographer: Skipped 4 frames!  The application may be doing too much work on its main thread.
+2022-06-11 10:36:39.383 19503-19503/com.grewon.testlio D/ColorViewRootUtil: initSwipState, isDisplayCompatApp false
+2022-06-11 10:36:39.384 19503-19503/com.grewon.testlio D/ColorViewRootUtil: updateScreenSize, mScreenHeight 1600,mScreenWidth:720,height:1600,width:720
+2022-06-11 10:36:39.407 19503-19503/com.grewon.testlio I/Choreographer: Skipped 1 frames!  The application may be doing too much work on its main thread.
+2022-06-11 10:36:39.825 19503-20257/com.grewon.testlio I/okhttp.OkHttpClient: <-- 201 Created https://vettingapp.testl.io/api/v1/division/ (525ms)
+2022-06-11 10:36:39.825 19503-20257/com.grewon.testlio I/okhttp.OkHttpClient: Date: Sat, 11 Jun 2022 08:36:38 GMT
+2022-06-11 10:36:39.825 19503-20257/com.grewon.testlio I/okhttp.OkHttpClient: Server: Apache/2.4.41 (Ubuntu)
+2022-06-11 10:36:39.825 19503-20257/com.grewon.testlio I/okhttp.OkHttpClient: Content-Length: 38
+2022-06-11 10:36:39.825 19503-20257/com.grewon.testlio I/okhttp.OkHttpClient: Allow: GET, POST, HEAD, OPTIONS
+2022-06-11 10:36:39.825 19503-20257/com.grewon.testlio I/okhttp.OkHttpClient: X-Frame-Options: DENY
+2022-06-11 10:36:39.825 19503-20257/com.grewon.testlio I/okhttp.OkHttpClient: X-Content-Type-Options: nosniff
+2022-06-11 10:36:39.825 19503-20257/com.grewon.testlio I/okhttp.OkHttpClient: Referrer-Policy: same-origin
+2022-06-11 10:36:39.825 19503-20257/com.grewon.testlio I/okhttp.OkHttpClient: Keep-Alive: timeout=5, max=100
+2022-06-11 10:36:39.826 19503-20257/com.grewon.testlio I/okhttp.OkHttpClient: Connection: Keep-Alive
+2022-06-11 10:36:39.826 19503-20257/com.grewon.testlio I/okhttp.OkHttpClient: Content-Type: application/json
+2022-06-11 10:36:39.827 19503-20257/com.grewon.testlio I/okhttp.OkHttpClient: {"id":9216,"title":"A,B","grade":4739}
+2022-06-11 10:36:39.828 19503-20257/com.grewon.testlio I/okhttp.OkHttpClient: <-- END HTTP (38-byte body)
+2022-06-11 10:36:39.858 19503-19571/com.grewon.testlio D/Surface: Surface::disconnect(this=0x7c11e7c000,api=1)
+2022-06-11 10:36:39.859 19503-19503/com.grewon.testlio D/View: [Warning] assignParent to null: this = DecorView@1405fcd[ClassesDivisionsActivity]
+2022-06-11 10:36:39.860 19503-19503/com.grewon.testlio I/InputTransport: Destroy ARC handle: 0x7c121277e0
+2022-06-11 10:36:39.897 19503-19571/com.grewon.testlio D/Surface: Surface::disconnect(this=0x7c11793000,api=1)
+2022-06-11 10:36:39.900 19503-19503/com.grewon.testlio D/View: [Warning] assignParent to null: this = DecorView@daabcf8[ClassesDivisionsActivity]
+2022-06-11 10:36:39.900 19503-19503/com.grewon.testlio I/InputTransport: Destroy ARC handle: 0x7c6b3a1620
+2022-06-11 10:36:39.918 19503-19503/com.grewon.testlio I/Choreographer: Skipped 4 frames!  The application may be doing too much work on its main thread.
+2022-06-11 10:36:39.921 19503-20257/com.grewon.testlio E/LogX: X-Auth-Token -> eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU3NTI0MzQ2LCJqdGkiOiJhNGJlMTg0OTcwMWY0MWYzYWYxYWM3ZTZlN2ViMjBlYyIsInVzZXJfaWQiOjEwODg0fQ.kM4y4ZfUxCt4WLBV45GATyF39UeeS1ZQyysPamdcS8k
+2022-06-11 10:36:39.922 19503-20257/com.grewon.testlio I/okhttp.OkHttpClient: --> GET https://vettingapp.testl.io/api/v1/division/?grade=4739
+2022-06-11 10:36:39.922 19503-20257/com.grewon.testlio I/okhttp.OkHttpClient: Content-Type: application/json
+2022-06-11 10:36:39.922 19503-20257/com.grewon.testlio I/okhttp.OkHttpClient: Cache-Control: no-cache
+2022-06-11 10:36:39.922 19503-20257/com.grewon.testlio I/okhttp.OkHttpClient: Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU3NTI0MzQ2LCJqdGkiOiJhNGJlMTg0OTcwMWY0MWYzYWYxYWM3ZTZlN2ViMjBlYyIsInVzZXJfaWQiOjEwODg0fQ.kM4y4ZfUxCt4WLBV45GATyF39UeeS1ZQyysPamdcS8k
+2022-06-11 10:36:39.923 19503-20257/com.grewon.testlio I/okhttp.OkHttpClient: --> END GET
+2022-06-11 10:36:39.936 19503-19503/com.grewon.testlio D/ColorViewRootUtil: initSwipState, isDisplayCompatApp false
+2022-06-11 10:36:39.937 19503-19503/com.grewon.testlio D/ColorViewRootUtil: updateScreenSize, mScreenHeight 1600,mScreenWidth:720,height:1600,width:720
+2022-06-11 10:36:39.940 19503-19503/com.grewon.testlio D/WindowManager: Add to mViews: com.color.internal.widget.ColorToastLayout{b342b94 V.E...... ......I. 0,0-0,0 #c0204f9 oppo:id/color_toast_layout}, this = android.view.WindowManagerGlobal@6c9e7eb,pkg= com.grewon.testlio
+2022-06-11 10:36:39.947 19503-19503/com.grewon.testlio D/ViewRootImpl[Toast]: hardware acceleration = true , fakeHwAccelerated = false, sRendererDisabled = false, forceHwAccelerated = false, sSystemRendererDisabled = false
+2022-06-11 10:36:39.955 19503-19503/com.grewon.testlio I/InputTransport: Create ARC handle: 0x7c6b2e6880
+2022-06-11 10:36:39.963 19503-19503/com.grewon.testlio I/Choreographer: Skipped 1 frames!  The application may be doing too much work on its main thread.
+2022-06-11 10:36:39.986 19503-19571/com.grewon.testlio D/Surface: Surface::connect(this=0x7c11bce000,api=1)
+2022-06-11 10:36:39.988 19503-19571/com.grewon.testlio D/Surface: Surface::setBufferCount(this=0x7c11bce000,bufferCount=3)
+2022-06-11 10:36:39.989 19503-19571/com.grewon.testlio D/Surface: Surface::allocateBuffers(this=0x7c11bce000)
+2022-06-11 10:36:40.006 19503-19503/com.grewon.testlio I/Choreographer: Skipped 2 frames!  The application may be doing too much work on its main thread.
+2022-06-11 10:36:40.014 19503-19503/com.grewon.testlio D/ColorViewRootUtil: initSwipState, isDisplayCompatApp false
+2022-06-11 10:36:40.016 19503-19503/com.grewon.testlio D/ColorViewRootUtil: updateScreenSize, mScreenHeight 1600,mScreenWidth:720,height:1600,width:720
+2022-06-11 10:36:40.068 19503-20257/com.grewon.testlio I/okhttp.OkHttpClient: <-- 200 OK https://vettingapp.testl.io/api/v1/division/?grade=4739 (145ms)
+2022-06-11 10:36:40.068 19503-20257/com.grewon.testlio I/okhttp.OkHttpClient: Date: Sat, 11 Jun 2022 08:36:38 GMT
+2022-06-11 10:36:40.069 19503-20257/com.grewon.testlio I/okhttp.OkHttpClient: Server: Apache/2.4.41 (Ubuntu)
+2022-06-11 10:36:40.069 19503-20257/com.grewon.testlio I/okhttp.OkHttpClient: Content-Length: 126
+2022-06-11 10:36:40.069 19503-20257/com.grewon.testlio I/okhttp.OkHttpClient: Allow: GET, POST, HEAD, OPTIONS
+2022-06-11 10:36:40.069 19503-20257/com.grewon.testlio I/okhttp.OkHttpClient: X-Frame-Options: DENY
+2022-06-11 10:36:40.069 19503-20257/com.grewon.testlio I/okhttp.OkHttpClient: X-Content-Type-Options: nosniff
+2022-06-11 10:36:40.069 19503-20257/com.grewon.testlio I/okhttp.OkHttpClient: Referrer-Policy: same-origin
+2022-06-11 10:36:40.069 19503-20257/com.grewon.testlio I/okhttp.OkHttpClient: Keep-Alive: timeout=5, max=99
+2022-06-11 10:36:40.069 19503-20257/com.grewon.testlio I/okhttp.OkHttpClient: Connection: Keep-Alive
+2022-06-11 10:36:40.070 19503-20257/com.grewon.testlio I/okhttp.OkHttpClient: Content-Type: application/json
+2022-06-11 10:36:40.071 19503-20257/com.grewon.testlio I/okhttp.OkHttpClient: {"count":1,"next":null,"previous":null,"results":[{"id":9216,"title":"A,B","grade":4739,"subject_count":0,"student_count":0}]}
+2022-06-11 10:36:40.071 19503-20257/com.grewon.testlio I/okhttp.OkHttpClient: <-- END HTTP (126-byte body)
+2022-06-11 10:36:40.121 19503-19503/com.grewon.testlio I/Choreographer: Skipped 1 frames!  The application may be doing too much work on its main thread.
+2022-06-11 10:36:43.398 19503-19571/com.grewon.testlio D/Surface: Surface::disconnect(this=0x7c11bce000,api=1)
+2022-06-11 10:36:43.402 19503-19503/com.grewon.testlio D/View: [Warning] assignParent to null: this = com.color.internal.widget.ColorToastLayout{b342b94 V.E...... ......ID 0,0-429,70 #c0204f9 oppo:id/color_toast_layout}
+2022-06-11 10:36:43.402 19503-19503/com.grewon.testlio I/InputTransport: Destroy ARC handle: 0x7c6b2e6880
+2022-06-11 10:36:43.430 19503-19503/com.grewon.testlio I/Choreographer: Skipped 1 frames!  The application may be doing too much work on its main thread.
